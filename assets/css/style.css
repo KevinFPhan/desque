@@ -12102,11 +12102,17 @@ body.sal-disabled [data-sal|='flip'] {
 		padding-bottom: 10px;
 	}
 }
+.header-middle {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-basis: 50%;
+}
 .haeder-default .header-left {
 	display: flex;
 	align-items: center;
 	justify-content: start;
-	flex-basis: 65%;
+	flex-basis: 25%;
 	padding-left: 12px;
 }
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
@@ -12828,11 +12834,16 @@ span.rn-badge-card::before {
 /*------------------------------
     Popup Menu Styles  
 --------------------------------*/
+.logo-thumbnail {
+	z-index: -20;
+	opacity: 0;
+	transform: translateX(-100px);
+}
 .logo-thumbnail a {
 	display: block;
 }
 .logo-thumbnail img {
-	height: 35px;
+	height: 25px;
 	object-fit: cover;
 	width: 100%;
 }
@@ -13521,7 +13532,7 @@ span.rn-badge-card::before {
 		margin-right: 0;
 	}
 }
-.rn-header .logo-thumbnail::after {
+/* .rn-header .logo-thumbnail::after {
 	background: var(--color-border);
 	width: 1px;
 	height: 36px;
@@ -13530,7 +13541,7 @@ span.rn-badge-card::before {
 	right: 0;
 	top: 50%;
 	transform: translateY(-50%);
-}
+} */
 @media only screen and (max-width: 479px) {
 	.rn-header .logo-thumbnail::after {
 		display: none;
@@ -25595,8 +25606,53 @@ body.active-light-mode {
 /*# sourceMappingURL=../maps/style.css.map */
 
 #DesqueLogo {
-	width: 90px !important;
-	height: 100% !important;
+	height: 60px !important;
+	position: relative;
+}
+
+#DesqueLogo::after {
+	content: '';
+	background-image: url('https://desque.sfo3.cdn.digitaloceanspaces.com/desque/TheDesque_Logo1.png');
+	background-size: cover;
+	background-repeat: no-repeat;
+	position: absolute;
+	height: 25px;
+	object-fit: cover;
+	width: 91px;
+	top: 50%;
+	transform: translate(-100%, -50%);
+	opacity: 0;
+	animation: logoSlideBack 1s cubic-bezier(0, 0, 0.12, 1);
+}
+
+#DesqueLogo:hover::after {
+	animation: logoSlide 1s cubic-bezier(0, 0, 0.12, 1) 600ms forwards;
+}
+
+@keyframes logoSlide {
+	0% {
+		opacity: 0;
+	}
+	30% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+		transform: translate(30%, -50%);
+	}
+}
+@keyframes logoSlideBack {
+	0% {
+		opacity: 1;
+		transform: translate(30%, -50%);
+	}
+	30% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 0;
+		transform: translate(-100%, -50%);
+	}
 }
 
 .slider-area {
@@ -25648,50 +25704,48 @@ body.active-light-mode {
 }
 
 .swiper-pagination {
-	top: 82%;
+	top: 85%;
+}
+.swiper-button-prev,
+.swiper-button-next {
+	top: 54.5%;
+	color: var(--color-primary);
 }
 
-@media screen and (max-width: 767px) {
-	.swiper {
-		height: 800px;
-	}
-	.swiper-wrapper {
-		height: 700px;
-	}
-	.swiper-slide {
-		width: 270px;
-		height: 527px;
-	}
-	.swiper-pagination {
-		top: 85%;
-	}
-}
-
-.swiper-slide .swiper--img {
+.swiper-slide img.swiper--img {
+	border: none;
 	display: block;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
 	width: 100%;
 	height: 100%;
-	object-fit: cover;
-	object-position: top;
+	/* object-fit: cover; */
+	/* object-position: top; */
 	position: absolute;
 	border-radius: 20px;
 }
 
-/* .swiper-slide .swiper--logo {
-	position: relative;
-	height: 200px;
+/* .swiper-slide .swiper--img1 {
+	background: url('https://desque.sfo3.cdn.digitaloceanspaces.com/desque/assets/Carousel/EnergyCinq.png');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	width: 100%;
+	height: 100%;
 } */
 
-/* .swiper-slide div {
-	position: relative;
-	text-align: center;
-	margin-bottom: 40px;
-	width: 100%;
-	display: none;
-} */
+.swiper-slide .swiper--logo {
+	position: absolute;
+	height: 150px;
+	margin-bottom: 50px;
+}
 
 .swiper-slide .brand-details {
-	display: none;
+	position: absolute;
+	/* transform: translateY(-60px); */
+	transform: translateY(50px);
+	opacity: 0;
 }
 
 .swiper-slide .brand-details::before,
@@ -25717,84 +25771,167 @@ body.active-light-mode {
 	margin: 0 !important;
 	font-size: 13px !important;
 }
+,
 .swiper-slide-active {
 	animation: fadeIn2 0.4s ease-in;
 }
 
-.swiper-slide-active img.swiper--img1 {
+.swiper-slide-active .swiper--img1 {
 	content: url('https://desque.sfo3.cdn.digitaloceanspaces.com/desque/assets/Carousel/EnergyCinq-Active.png');
-	background: linear-gradient(
-		linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%)
-	);
+
+	/* background: linear-gradient(
+			to top,
+			rgba(0, 0, 0, 1),
+			rgba(255, 0, 0, 0),
+			transparent
+		),
+		url('https://desque.sfo3.cdn.digitaloceanspaces.com/desque/assets/Carousel/EnergyCinq-Active.png'); */
 	z-index: -1;
-	transform: scale(1.1, 1.2);
-	/* transition: transform 0.2s ease-in; */
+	transform: scale(1.1, 1.1);
+	transition: transform 0.2s ease-in;
 }
-.swiper-slide-active img.swiper--img2 {
+.swiper-slide-active .swiper--img2 {
 	content: url('https://desque.sfo3.cdn.digitaloceanspaces.com/desque/assets/Carousel/Epic-Active.png');
 	z-index: -1;
-	transform: scale(1.1, 1.2);
-	/* transition: transform 0.2s ease-in; */
+	transform: scale(1.1, 1.1);
+	transition: transform 0.2s ease-in;
 }
-.swiper-slide-active img.swiper--img3 {
+.swiper-slide-active .swiper--img3 {
 	content: url('https://desque.sfo3.cdn.digitaloceanspaces.com/desque/assets/Carousel/Exotico-Active.png');
 	z-index: -1;
-	transform: scale(1.1, 1.2);
-	/* transition: transform 0.2s ease-in; */
+	transform: scale(1.1, 1.1);
+	transition: transform 0.2s ease-in;
 }
-.swiper-slide-active img.swiper--img4 {
+.swiper-slide-active .swiper--img4 {
 	content: url('https://desque.sfo3.cdn.digitaloceanspaces.com/desque/assets/Carousel/InstinctAthletics-Active.png');
 	z-index: -1;
-	transform: scale(1.1, 1.2);
-	/* transition: transform 0.2s ease-in; */
+	transform: scale(1.1, 1.1);
+	transition: transform 0.2s ease-in;
 }
-.swiper-slide-active img.swiper--img5 {
+.swiper-slide-active .swiper--img5 {
 	content: url('https://desque.sfo3.cdn.digitaloceanspaces.com/desque/assets/Carousel/Naran-Active.png');
 	z-index: -1;
-	transform: scale(1.1, 1.2);
-	/* transition: transform 0.2s ease-in; */
+	transform: scale(1.1, 1.1);
+	transition: transform 0.2s ease-in;
 }
-.swiper-slide-active img.swiper--img6 {
+.swiper-slide-active .swiper--img6 {
 	content: url('https://desque.sfo3.cdn.digitaloceanspaces.com/desque/assets/Carousel/Nuletica-Active.png');
 	z-index: -1;
-	transform: scale(1.1, 1.2);
-	/* transition: transform 0.2s ease-in; */
+	transform: scale(1.1, 1.1);
+	transition: transform 0.2s ease-in;
 }
-.swiper-slide-active img.swiper--img7 {
+.swiper-slide-active .swiper--img7 {
 	content: url('https://desque.sfo3.cdn.digitaloceanspaces.com/desque/assets/Carousel/Pokeology-Active.png');
 	z-index: -1;
-	transform: scale(1.1, 1.2);
-	/* transition: transform 0.2s ease-in; */
+	transform: scale(1.1, 1.1);
+	transition: transform 0.2s ease-in;
 }
-.swiper-slide-active img.swiper--img8 {
+.swiper-slide-active .swiper--img8 {
 	content: url('https://desque.sfo3.cdn.digitaloceanspaces.com/desque/assets/Carousel/Sapa-Active.png');
 	z-index: -1;
-	transform: scale(1.1, 1.2);
-	/* transition: transform 0.2s ease-in; */
+	transform: scale(1.1, 1.1);
+	transition: transform 0.2s ease-in;
 }
-.swiper-slide-active img.swiper--img9 {
+.swiper-slide-active .swiper--img9 {
 	content: url('https://desque.sfo3.cdn.digitaloceanspaces.com/desque/assets/Carousel/Sunrgy-Active.png');
 	z-index: -1;
-	transform: scale(1.1, 1.2);
-	/* transition: transform 0.2s ease-in; */
+	transform: scale(1.1, 1.1);
+	transition: transform 0.2s ease-in;
 }
-.swiper-slide-active img.swiper--img10 {
+.swiper-slide-active .swiper--img10 {
 	content: url('https://desque.sfo3.cdn.digitaloceanspaces.com/desque/assets/Carousel/UptownBakes-Active.png');
 	z-index: -1;
-	transform: scale(1.1, 1.2);
-	/* transition: transform 0.2s ease-in; */
+	transform: scale(1.1, 1.1);
+	transition: transform 0.2s ease-in;
 }
 
 .swiper-slide-active .brand-details {
-	display: block;
-	animation: fadeIn 0.3s ease-in;
+	/* display: block; */
+	/* animation: fadeInDownC 0.3s cubic-bezier(0, 0, 0.12, 1) forwards; */
+	animation: fadeInUpC 0.3s cubic-bezier(0, 0, 0.12, 1) forwards;
+	/* animation-delay: 400ms; */
+	animation-delay: 280ms;
 }
 .swiper-slide-active .swiper--logo {
-	animation: fadeInUp2 0.4s ease-in;
+	animation: slideUp 0.3s cubic-bezier(0, 0, 0.12, 1) forwards;
+	animation-delay: 280ms;
+}
+@media screen and (max-width: 767px) {
+	.swiper {
+		height: 800px;
+	}
+	.swiper-wrapper {
+		height: 700px;
+	}
+	.swiper-slide {
+		width: 270px;
+		height: 527px;
+	}
+	.swiper-pagination {
+		top: 85%;
+	}
+	.swiper-slide .swiper--logo {
+		margin-bottom: 80px;
+	}
+}
+@media screen and (max-width: 1700px) {
+	.swiper {
+		height: 1000px;
+	}
+	.swiper-wrapper {
+		height: 800px;
+	}
+	.swiper-slide {
+		width: 300px;
+		height: 585px;
+	}
+	.swiper-pagination {
+		top: 84%;
+	}
+	.swiper-slide .swiper--logo {
+		height: 130px;
+		margin-bottom: 60px;
+	}
+	.swiper-button-prev,
+	.swiper-button-next {
+		top: 53%;
+	}
+}
+@keyframes fadeInDownC {
+	0% {
+		opacity: 0;
+	}
+	50% {
+		opacity: 0.3;
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+@keyframes fadeInUpC {
+	0% {
+		opacity: 0;
+	}
+	50% {
+		opacity: 0.3;
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+@keyframes slideUp {
+	0% {
+		transform: translateY(0);
+	}
+	100% {
+		transform: translateY(-50px);
+	}
 }
 @keyframes fadeIn2 {
 	0% {
-		opacity: 0.4;
+		opacity: 0.5;
 	}
 	100% {
 		opacity: 1;
@@ -25814,6 +25951,35 @@ body.active-light-mode {
 		opacity: 1;
 		transform: none;
 	}
+}
+
+@keyframes logo2-anim {
+	0% {
+		opacity: 0;
+	}
+	50% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+		transform: translateX(50px);
+	}
+}
+
+@keyframes logo2-anim2 {
+	0% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+.logo2-animation {
+	animation: logo2-anim 400ms cubic-bezier(0, 0, 0.12, 1) 700ms;
+}
+
+.logo2-animation2 {
+	animation: logo2-anim2 500ms cubic-bezier(0, 0, 0.12, 1);
 }
 
 /********************* Footer *******************/
