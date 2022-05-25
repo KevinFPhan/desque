@@ -43,7 +43,6 @@
 
 	<body class="template-color-1 nft-body-connect count_bg--4">
 		<!-- start header area -->
-		<!-- Start Header -->
 		<header class="rn-header haeder-default header--sticky">
 			<div class="container-fluid">
 				<div class="header-inner">
@@ -157,15 +156,8 @@
 			<div class="inner">
 				<div class="header-top">
 					<div class="logo logo-custom-css">
-						<a class="logo-light" href="index.html"
-							><img
-								src="assets/images/logo/logo-white.png"
-								alt="nft-logo"
-						/></a>
-						<a class="logo-dark" href="index.html"
-							><img
-								src="assets/images/logo/logo-dark.png"
-								alt="nft-logo"
+						<a class="m-logo-1" href="index.html"
+							><img src="/DesqueLogo.svg" alt=""
 						/></a>
 					</div>
 					<div class="close-menu">
@@ -177,21 +169,15 @@
 				<nav>
 					<!-- Start Mainmanu Nav -->
 					<ul class="mainmenu">
-						<li class="">
-							<a class="nav-link its_new" href="index.html"
-								>Home</a
-							>
+						<li>
+							<a href="index.html">Home</a>
 						</li>
 						<li><a href="about.html">About</a></li>
-						<li class="">
-							<a class="nav-link its_new" href="service.html"
-								>Services</a
-							>
+						<li>
+							<a href="service.html">Services</a>
 						</li>
-						<li class="">
-							<a class="nav-link its_new" href="portfolio.html"
-								>Portfolio</a
-							>
+						<li>
+							<a href="portfolio.html">Portfolio</a>
 						</li>
 
 						<li class=""><a href="contact.html">Contact</a></li>
@@ -204,13 +190,30 @@
 
 		<!-- start banner area -->
 		<div class="slider-area mb--50">
+			<div
+				class="video-wrapper"
+				data-sal="slide-up"
+				data-sal-duration="800"
+			>
+				<div class="video-overlay-2"></div>
+				<video
+					id="background-video"
+					src="https://desque.sfo3.cdn.digitaloceanspaces.com/desque/hero-video.mp4"
+					autoplay
+					loop
+					muted
+				></video>
+			</div>
+
 			<div class="container-fluid h-100">
-				<div class="row d-flex h-100 align-items-center hero-inner">
-					<div class="col-lg-6 order-1 home-11-slide-padding">
+				<div
+					class="d-flex flex-column h-100 align-items-center hero-inner"
+				>
+					<div class="order-1 home-11-slide-padding">
 						<h2
 							class="title"
-							data-sal-delay="200"
-							data-sal="slide-up"
+							data-sal-delay="500"
+							data-sal="slide-right"
 							data-sal-duration="800"
 						>
 							Discover Digital Art, Collect <br />
@@ -219,8 +222,8 @@
 						</h2>
 						<p
 							class="slide-disc rn-hero-text"
-							data-sal-delay="300"
-							data-sal="slide-up"
+							data-sal-delay="600"
+							data-sal="slide-right"
 							data-sal-duration="800"
 						>
 							a non-interchangeable unit of data stored on a
@@ -246,29 +249,14 @@
 							>
 						</div>
 					</div>
-					<div class="col-lg-6 col-sm-12 hero-right order-2">
+					<div class="d-flex hero-right order-2">
 						<div
-							class="banner-right-feature-product d-flex flex-wrap justify-content-center align-items-center"
+							class="banner-right-feature-product d-flex flex-wrap justify-content-end align-items-end"
 							data-sal-delay="300"
 							data-sal="slide-up"
 							data-sal-duration="800"
 						>
 							<!-- start single product -->
-							<div
-								class="single-slide-product"
-								data-sal-delay="700"
-								data-sal="slide-up"
-								data-sal-duration="800"
-							>
-								<div class="product-style-one">
-									<a href="product-details.html"
-										><span
-											class="product-name large-product-title"
-											>Strategy</span
-										></a
-									>
-								</div>
-							</div>
 							<div
 								class="single-slide-product"
 								data-sal-delay="800"
@@ -366,11 +354,7 @@
 		<section class="swiper mySwiper">
 			<div class="swiper-wrapper">
 				<div class="swiper-slide">
-					<img
-						class="swiper--img swiper--img1"
-						src="https://desque.sfo3.cdn.digitaloceanspaces.com/desque/assets/Carousel/EnergyCinq.png"
-						alt=""
-					/>
+					<div class="swiper-slide-img swiper-slide-img-1"></div>
 					<img
 						class="swiper--logo"
 						src="https://desque.sfo3.cdn.digitaloceanspaces.com/desque/assets/Logo/EnergyCinq.png"
@@ -387,11 +371,7 @@
 					</div>
 				</div>
 				<div class="swiper-slide">
-					<img
-						class="swiper--img swiper--img2"
-						src="https://desque.sfo3.cdn.digitaloceanspaces.com/desque/assets/Carousel/Epic.png"
-						alt=""
-					/>
+					<div class="swiper-slide-img swiper-slide-img-2"></div>
 					<img
 						class="swiper--logo"
 						src="https://desque.sfo3.cdn.digitaloceanspaces.com/desque/assets/Logo/EpicModelingAgency.png"
@@ -408,11 +388,7 @@
 					</div>
 				</div>
 				<div class="swiper-slide">
-					<img
-						class="swiper--img swiper--img3"
-						src="https://desque.sfo3.cdn.digitaloceanspaces.com/desque/assets/Carousel/Exotico.png"
-						alt=""
-					/>
+					<div class="swiper-slide-img swiper-slide-img-3"></div>
 					<img
 						class="swiper--logo"
 						src="https://desque.sfo3.cdn.digitaloceanspaces.com/desque/assets/Logo/ExoticoRentals.png"
@@ -429,11 +405,7 @@
 					</div>
 				</div>
 				<div class="swiper-slide">
-					<img
-						class="swiper--img swiper--img4 block absolute rounded-[20px] w-full h-full object-cover object-top"
-						src="https://desque.sfo3.cdn.digitaloceanspaces.com/desque/assets/Carousel/InstinctAthletics.png"
-						alt=""
-					/>
+					<div class="swiper-slide-img swiper-slide-img-4"></div>
 					<img
 						class="swiper--logo"
 						src="https://desque.sfo3.cdn.digitaloceanspaces.com/desque/assets/Logo/InstinctAthletics.png"
@@ -450,11 +422,7 @@
 					</div>
 				</div>
 				<div class="swiper-slide">
-					<img
-						class="swiper--img swiper--img5 block absolute rounded-[20px] w-full h-full object-cover object-top"
-						src="https://desque.sfo3.cdn.digitaloceanspaces.com/desque/assets/Carousel/Naran.png"
-						alt=""
-					/>
+					<div class="swiper-slide-img swiper-slide-img-5"></div>
 					<img
 						class="swiper--logo"
 						src="https://desque.sfo3.cdn.digitaloceanspaces.com/desque/assets/Logo/Naran.png"
@@ -471,11 +439,7 @@
 					</div>
 				</div>
 				<div class="swiper-slide">
-					<img
-						class="swiper--img swiper--img6 block absolute rounded-[20px] w-full h-full object-cover object-top"
-						src="https://desque.sfo3.cdn.digitaloceanspaces.com/desque/assets/Carousel/Nuletica.png"
-						alt=""
-					/>
+					<div class="swiper-slide-img swiper-slide-img-6"></div>
 					<img
 						class="swiper--logo"
 						src="https://desque.sfo3.cdn.digitaloceanspaces.com/desque/assets/Logo/Nuletica.png"
@@ -492,11 +456,7 @@
 					</div>
 				</div>
 				<div class="swiper-slide">
-					<img
-						class="swiper--img swiper--img7 block absolute rounded-[20px] w-full h-full object-cover object-top"
-						src="https://desque.sfo3.cdn.digitaloceanspaces.com/desque/assets/Carousel/Pokeology.png"
-						alt=""
-					/>
+					<div class="swiper-slide-img swiper-slide-img-7"></div>
 					<img
 						class="swiper--logo"
 						src="https://desque.sfo3.cdn.digitaloceanspaces.com/desque/assets/Logo/Pokeology.png"
@@ -513,11 +473,7 @@
 					</div>
 				</div>
 				<div class="swiper-slide">
-					<img
-						class="swiper--img swiper--img8 block absolute rounded-[20px] w-full h-full object-cover object-top"
-						src="https://desque.sfo3.cdn.digitaloceanspaces.com/desque/assets/Carousel/Sapa.png"
-						alt=""
-					/>
+					<div class="swiper-slide-img swiper-slide-img-8"></div>
 					<img
 						class="swiper--logo"
 						src="https://desque.sfo3.cdn.digitaloceanspaces.com/desque/assets/Logo/Sapa.png"
@@ -534,11 +490,7 @@
 					</div>
 				</div>
 				<div class="swiper-slide">
-					<img
-						class="swiper--img swiper--img9 block absolute rounded-[20px] w-full h-full object-cover object-top"
-						src="https://desque.sfo3.cdn.digitaloceanspaces.com/desque/assets/Carousel/Sunrgy.png"
-						alt=""
-					/>
+					<div class="swiper-slide-img swiper-slide-img-9"></div>
 					<img
 						class="swiper--logo"
 						src="https://desque.sfo3.cdn.digitaloceanspaces.com/desque/assets/Logo/Sunrgy.png"
@@ -555,11 +507,7 @@
 					</div>
 				</div>
 				<div class="swiper-slide">
-					<img
-						class="swiper--img swiper--img10 block absolute rounded-[20px] w-full h-full object-cover object-top"
-						src="https://desque.sfo3.cdn.digitaloceanspaces.com/desque/assets/Carousel/UptownBakes.png"
-						alt=""
-					/>
+					<div class="swiper-slide-img swiper-slide-img-10"></div>
 					<img
 						class="swiper--logo"
 						src="https://desque.sfo3.cdn.digitaloceanspaces.com/desque/assets/Logo/UptownBakes.png"

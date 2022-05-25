@@ -159,7 +159,7 @@ body {
 	color: var(--color-body);
 	font-weight: var(--p-regular);
 	position: relative;
-	background: var(--background-color-1);
+	background: #031216;
 }
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
 	body {
@@ -12097,7 +12097,6 @@ body.sal-disabled [data-sal|='flip'] {
 } */
 @media only screen and (max-width: 479px) {
 	.haeder-default .header-inner {
-		display: block;
 		padding-top: 10px;
 		padding-bottom: 10px;
 	}
@@ -12115,25 +12114,10 @@ body.sal-disabled [data-sal|='flip'] {
 	flex-basis: 25%;
 	padding-left: 12px;
 }
-@media only screen and (min-width: 992px) and (max-width: 1199px) {
-	.haeder-default .header-left {
-		flex-basis: 35%;
-	}
-}
-@media only screen and (min-width: 768px) and (max-width: 991px) {
-	.haeder-default .header-left {
-		flex-basis: 35%;
-	}
-}
-@media only screen and (max-width: 767px) {
-	.haeder-default .header-left {
-		flex-basis: 45%;
-	}
-}
+
 @media only screen and (max-width: 479px) {
 	.haeder-default .header-left {
-		justify-content: center;
-		flex-basis: 100%;
+		flex-basis: 40%;
 		padding-left: 0px;
 	}
 }
@@ -12145,26 +12129,8 @@ body.sal-disabled [data-sal|='flip'] {
 	margin: 0 -5px;
 	padding-right: 12px;
 }
-@media only screen and (min-width: 992px) and (max-width: 1199px) {
-	.haeder-default .header-right {
-		flex-basis: 65%;
-	}
-}
-@media only screen and (min-width: 768px) and (max-width: 991px) {
-	.haeder-default .header-right {
-		flex-basis: 65%;
-	}
-}
-@media only screen and (max-width: 767px) {
-	.haeder-default .header-right {
-		flex-basis: 65%;
-	}
-}
 @media only screen and (max-width: 479px) {
 	.haeder-default .header-right {
-		justify-content: center;
-		flex-basis: 100%;
-		margin-top: 10px;
 		padding-right: 0px;
 	}
 }
@@ -12909,16 +12875,15 @@ span.rn-badge-card::before {
 	transition: opacity 0.5s ease-out;
 }
 .popup-mobile-menu .inner {
-	width: 320px;
+	width: 100%;
 	z-index: 999;
 	position: absolute;
-	background-color: var(--background-color-3);
+	background-color: var(--background-color-1);
 	height: 100%;
-	height: 100vh;
+	min-height: 100vh;
 	display: flex;
 	flex-direction: column;
 	opacity: 0;
-	left: -150px;
 	transition: all 0.5s ease-out;
 }
 .popup-mobile-menu .inner .header-top {
@@ -12926,10 +12891,28 @@ span.rn-badge-card::before {
 	border-bottom: 1px solid var(--color-border);
 	align-items: center;
 	justify-content: space-between;
-	padding: 15px 20px;
+	padding: 0px 30px;
+	height: 85px;
 }
+.popup-mobile-menu .inner .header-top .logo {
+	display: inline;
+}
+.m-logo-1 img {
+	height: 60px;
+}
+
+.popup-mobile-menu nav {
+	position: relative;
+	height: 100%;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding-bottom: 5%;
+}
+
 .popup-mobile-menu .inner .header-top .logo a img {
-	max-height: 36px;
+	max-height: 70px;
 }
 .popup-mobile-menu .inner .header-top .close-menu .close-button {
 	background: var(--color-dark);
@@ -12956,20 +12939,28 @@ span.rn-badge-card::before {
 	list-style: none;
 	padding: 0;
 	margin: 0;
+	text-align: center;
 	padding: 15px 20px;
 }
 .popup-mobile-menu .mainmenu li {
 	margin: 0;
 }
 .popup-mobile-menu .mainmenu li a {
-	padding: 8px 0;
-	display: block;
-	font-size: 16px;
+	padding: 15px 0;
+	font-size: 35px;
 	font-weight: 500;
 	color: var(--color-body);
 	display: flex;
-	justify-content: space-between;
+	justify-content: center;
 }
+
+@media screen and (max-width: 567px) {
+	.popup-mobile-menu .mainmenu li a {
+		padding: 10px 0;
+		font-size: 24px;
+	}
+}
+
 .popup-mobile-menu .mainmenu li a svg {
 	width: 19px;
 	height: auto;
@@ -15883,6 +15874,9 @@ figcaption {
 }
 
 .hero-right {
+	position: relative;
+	right: -85px;
+	width: 100%;
 	height: 100%;
 }
 
@@ -15934,7 +15928,7 @@ figcaption {
 	}
 } */
 .banner-right-feature-product .single-slide-product {
-	width: 50%;
+	width: 25%;
 	padding: 15px;
 	/* width: 450px; */
 	height: 50%;
@@ -23775,7 +23769,7 @@ body.active-light-mode {
 .active-light-mode .banner_xii .left-thumbnail-image img,
 .active-light-mode .banner_xii .place-bet-area.into-banner,
 .active-light-mode .expo-15-wrapper .thumb-wrapepr img.main {
-	background: var(--color-white);
+	background: var(--background-color-2);
 }
 .active-light-mode .slick-dots li button,
 .active-light-mode .left-header-style,
@@ -25657,6 +25651,7 @@ body.active-light-mode {
 
 .slider-area {
 	height: calc(100vh - 81px);
+	position: relative;
 }
 
 @media screen and (max-width: 1199px) {
@@ -25702,6 +25697,75 @@ body.active-light-mode {
 	align-items: center;
 	flex-direction: column;
 }
+.swiper-slide-img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	border-radius: 20px;
+}
+
+.swiper-slide-img-1 {
+	background: url('https://desque.sfo3.cdn.digitaloceanspaces.com/desque/assets/Carousel/EnergyCinq.png');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.swiper-slide-img-2 {
+	background: url('https://desque.sfo3.cdn.digitaloceanspaces.com/desque/assets/Carousel/Epic.png');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.swiper-slide-img-3 {
+	background: url('https://desque.sfo3.cdn.digitaloceanspaces.com/desque/assets/Carousel/Exotico.png');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.swiper-slide-img-4 {
+	background: url('https://desque.sfo3.cdn.digitaloceanspaces.com/desque/assets/Carousel/InstinctAthletics.png');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.swiper-slide-img-5 {
+	background: url('https://desque.sfo3.cdn.digitaloceanspaces.com/desque/assets/Carousel/Naran.png');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.swiper-slide-img-6 {
+	background: url('https://desque.sfo3.cdn.digitaloceanspaces.com/desque/assets/Carousel/Nuletica.png');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.swiper-slide-img-7 {
+	background: url('https://desque.sfo3.cdn.digitaloceanspaces.com/desque/assets/Carousel/Pokeology.png');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.swiper-slide-img-8 {
+	background: url('https://desque.sfo3.cdn.digitaloceanspaces.com/desque/assets/Carousel/Sapa.png');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.swiper-slide-img-9 {
+	background: url('https://desque.sfo3.cdn.digitaloceanspaces.com/desque/assets/Carousel/Sunrgy.png');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.swiper-slide-img-10 {
+	background: url('https://desque.sfo3.cdn.digitaloceanspaces.com/desque/assets/Carousel/UptownBakes.png');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
 
 .swiper-pagination {
 	top: 85%;
@@ -25726,19 +25790,10 @@ body.active-light-mode {
 	border-radius: 20px;
 }
 
-/* .swiper-slide .swiper--img1 {
-	background: url('https://desque.sfo3.cdn.digitaloceanspaces.com/desque/assets/Carousel/EnergyCinq.png');
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
-	width: 100%;
-	height: 100%;
-} */
-
 .swiper-slide .swiper--logo {
 	position: absolute;
 	height: 150px;
-	margin-bottom: 50px;
+	margin-bottom: 60px;
 }
 
 .swiper-slide .brand-details {
@@ -25771,75 +25826,157 @@ body.active-light-mode {
 	margin: 0 !important;
 	font-size: 13px !important;
 }
-,
+
 .swiper-slide-active {
 	animation: fadeIn2 0.4s ease-in;
 }
 
-.swiper-slide-active .swiper--img1 {
-	content: url('https://desque.sfo3.cdn.digitaloceanspaces.com/desque/assets/Carousel/EnergyCinq-Active.png');
-
-	/* background: linear-gradient(
+.swiper-slide-active .swiper-slide-img-1 {
+	background: linear-gradient(
 			to top,
 			rgba(0, 0, 0, 1),
 			rgba(255, 0, 0, 0),
 			transparent
 		),
-		url('https://desque.sfo3.cdn.digitaloceanspaces.com/desque/assets/Carousel/EnergyCinq-Active.png'); */
+		url('https://desque.sfo3.cdn.digitaloceanspaces.com/desque/assets/Carousel/EnergyCinq-Active.png');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
 	z-index: -1;
 	transform: scale(1.1, 1.1);
 	transition: transform 0.2s ease-in;
 }
-.swiper-slide-active .swiper--img2 {
-	content: url('https://desque.sfo3.cdn.digitaloceanspaces.com/desque/assets/Carousel/Epic-Active.png');
+.swiper-slide-active .swiper-slide-img-2 {
+	background: linear-gradient(
+			to top,
+			rgba(0, 0, 0, 1),
+			rgba(255, 0, 0, 0),
+			transparent
+		),
+		url('https://desque.sfo3.cdn.digitaloceanspaces.com/desque/assets/Carousel/Epic-Active.png');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
 	z-index: -1;
 	transform: scale(1.1, 1.1);
 	transition: transform 0.2s ease-in;
 }
-.swiper-slide-active .swiper--img3 {
-	content: url('https://desque.sfo3.cdn.digitaloceanspaces.com/desque/assets/Carousel/Exotico-Active.png');
+.swiper-slide-active .swiper-slide-img-3 {
+	background: linear-gradient(
+			to top,
+			rgba(0, 0, 0, 1),
+			rgba(255, 0, 0, 0),
+			transparent
+		),
+		url('https://desque.sfo3.cdn.digitaloceanspaces.com/desque/assets/Carousel/Exotico-Active.png');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
 	z-index: -1;
 	transform: scale(1.1, 1.1);
 	transition: transform 0.2s ease-in;
 }
-.swiper-slide-active .swiper--img4 {
-	content: url('https://desque.sfo3.cdn.digitaloceanspaces.com/desque/assets/Carousel/InstinctAthletics-Active.png');
+.swiper-slide-active .swiper-slide-img-4 {
+	background: linear-gradient(
+			to top,
+			rgba(0, 0, 0, 1),
+			rgba(255, 0, 0, 0),
+			transparent
+		),
+		url('https://desque.sfo3.cdn.digitaloceanspaces.com/desque/assets/Carousel/InstinctAthletics-Active.png');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
 	z-index: -1;
 	transform: scale(1.1, 1.1);
 	transition: transform 0.2s ease-in;
 }
-.swiper-slide-active .swiper--img5 {
-	content: url('https://desque.sfo3.cdn.digitaloceanspaces.com/desque/assets/Carousel/Naran-Active.png');
+.swiper-slide-active .swiper-slide-img-5 {
+	background: linear-gradient(
+			to top,
+			rgba(0, 0, 0, 1),
+			rgba(255, 0, 0, 0),
+			transparent
+		),
+		url('https://desque.sfo3.cdn.digitaloceanspaces.com/desque/assets/Carousel/Naran-Active.png');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
 	z-index: -1;
 	transform: scale(1.1, 1.1);
 	transition: transform 0.2s ease-in;
 }
-.swiper-slide-active .swiper--img6 {
-	content: url('https://desque.sfo3.cdn.digitaloceanspaces.com/desque/assets/Carousel/Nuletica-Active.png');
+.swiper-slide-active .swiper-slide-img-6 {
+	background: linear-gradient(
+			to top,
+			rgba(0, 0, 0, 1),
+			rgba(255, 0, 0, 0),
+			transparent
+		),
+		url('https://desque.sfo3.cdn.digitaloceanspaces.com/desque/assets/Carousel/Nuletica-Active.png');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
 	z-index: -1;
 	transform: scale(1.1, 1.1);
 	transition: transform 0.2s ease-in;
 }
-.swiper-slide-active .swiper--img7 {
-	content: url('https://desque.sfo3.cdn.digitaloceanspaces.com/desque/assets/Carousel/Pokeology-Active.png');
+.swiper-slide-active .swiper-slide-img-7 {
+	background: linear-gradient(
+			to top,
+			rgba(0, 0, 0, 1),
+			rgba(255, 0, 0, 0),
+			transparent
+		),
+		url('https://desque.sfo3.cdn.digitaloceanspaces.com/desque/assets/Carousel/Pokeology-Active.png');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
 	z-index: -1;
 	transform: scale(1.1, 1.1);
 	transition: transform 0.2s ease-in;
 }
-.swiper-slide-active .swiper--img8 {
-	content: url('https://desque.sfo3.cdn.digitaloceanspaces.com/desque/assets/Carousel/Sapa-Active.png');
+.swiper-slide-active .swiper-slide-img-8 {
+	background: linear-gradient(
+			to top,
+			rgba(0, 0, 0, 1),
+			rgba(255, 0, 0, 0),
+			transparent
+		),
+		url('https://desque.sfo3.cdn.digitaloceanspaces.com/desque/assets/Carousel/Sapa-Active.png');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
 	z-index: -1;
 	transform: scale(1.1, 1.1);
 	transition: transform 0.2s ease-in;
 }
-.swiper-slide-active .swiper--img9 {
-	content: url('https://desque.sfo3.cdn.digitaloceanspaces.com/desque/assets/Carousel/Sunrgy-Active.png');
+.swiper-slide-active .swiper-slide-img-9 {
+	background: linear-gradient(
+			to top,
+			rgba(0, 0, 0, 1),
+			rgba(255, 0, 0, 0),
+			transparent
+		),
+		url('https://desque.sfo3.cdn.digitaloceanspaces.com/desque/assets/Carousel/Sunrgy-Active.png');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
 	z-index: -1;
 	transform: scale(1.1, 1.1);
 	transition: transform 0.2s ease-in;
 }
-.swiper-slide-active .swiper--img10 {
-	content: url('https://desque.sfo3.cdn.digitaloceanspaces.com/desque/assets/Carousel/UptownBakes-Active.png');
+.swiper-slide-active .swiper-slide-img-10 {
+	background: linear-gradient(
+			to top,
+			rgba(0, 0, 0, 1),
+			rgba(255, 0, 0, 0),
+			transparent
+		),
+		url('https://desque.sfo3.cdn.digitaloceanspaces.com/desque/assets/Carousel/UptownBakes-Active.png');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
 	z-index: -1;
 	transform: scale(1.1, 1.1);
 	transition: transform 0.2s ease-in;
@@ -25855,24 +25992,6 @@ body.active-light-mode {
 .swiper-slide-active .swiper--logo {
 	animation: slideUp 0.3s cubic-bezier(0, 0, 0.12, 1) forwards;
 	animation-delay: 280ms;
-}
-@media screen and (max-width: 767px) {
-	.swiper {
-		height: 800px;
-	}
-	.swiper-wrapper {
-		height: 700px;
-	}
-	.swiper-slide {
-		width: 270px;
-		height: 527px;
-	}
-	.swiper-pagination {
-		top: 85%;
-	}
-	.swiper-slide .swiper--logo {
-		margin-bottom: 80px;
-	}
 }
 @media screen and (max-width: 1700px) {
 	.swiper {
@@ -25895,6 +26014,24 @@ body.active-light-mode {
 	.swiper-button-prev,
 	.swiper-button-next {
 		top: 53%;
+	}
+}
+@media screen and (max-width: 767px) {
+	.swiper {
+		height: 800px;
+	}
+	.swiper-wrapper {
+		height: 700px;
+	}
+	.swiper-slide {
+		width: 270px;
+		height: 527px;
+	}
+	.swiper-pagination {
+		top: 87%;
+	}
+	.swiper-slide .swiper--logo {
+		margin-bottom: 80px;
 	}
 }
 @keyframes fadeInDownC {
@@ -26084,4 +26221,34 @@ body.active-light-mode {
 		align-items: center;
 		justify-content: center;
 	}
+}
+
+#background-video {
+	position: relative;
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
+	z-index: -100;
+	object-position: center;
+	background: rgba(255, 255, 255, 0.3);
+}
+
+.video-wrapper {
+	position: absolute;
+	top: 20px;
+	bottom: 20px;
+	left: 20px;
+	right: 20px;
+	z-index: -50;
+}
+
+.video-overlay-2 {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: -40;
+	background-color: gray;
+	opacity: 0.5;
 }
