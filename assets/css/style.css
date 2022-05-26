@@ -15879,11 +15879,16 @@ figcaption {
 	width: 100%;
 	height: 100%;
 }
+@media screen and (max-width: 1199px) {
+	.hero-right {
+		right: -35px;
+	}
+}
 
 @media screen and (max-width: 991px) {
-	.hero-right {
+	/* .hero-right {
 		height: 50%;
-	}
+	} */
 }
 
 .footer-right {
@@ -15910,6 +15915,9 @@ figcaption {
 	width: 100%;
 	position: relative;
 	padding: 20px 0px 20px 20px;
+	display: flex;
+	justify-content: end;
+	align-items: end;
 }
 @media only screen and (max-width: 1199px) {
 	.banner-right-feature-product {
@@ -15918,25 +15926,40 @@ figcaption {
 }
 @media only screen and (max-width: 767px) {
 	.banner-right-feature-product {
-		padding: 0px;
+		padding: 0px 0px 40px 0px;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
 	}
-}
-/* @media only screen and (max-width: 479px) {
-	.banner-right-feature-product {
-		height: 850px;
-		width: 102%;
-	}
-} */
-.banner-right-feature-product .single-slide-product {
-	width: 25%;
-	padding: 15px;
-	/* width: 450px; */
-	height: 50%;
 }
 
-@media only screen and (max-width: 576px) {
+.banner-right-feature-product .single-slide-product {
+	width: 28%;
+	padding: 15px;
+	/* width: 450px; */
+	height: 60%;
+}
+@media screen and (max-width: 991px) {
 	.banner-right-feature-product .single-slide-product {
-		height: 25%;
+		width: 33%;
+	}
+	.hero-right {
+		right: 0px;
+	}
+}
+@media screen and (max-width: 767px) {
+	.banner-right-feature-product .single-slide-product {
+		width: 100%;
+	}
+}
+@media only screen and (max-width: 576px) {
+	.banner-right-feature-product {
+		/* margin-top: 40px; */
+		padding-right: 20px;
+		padding-left: 20px;
+	}
+	.banner-right-feature-product .single-slide-product {
+		height: 40%;
 		width: 100%;
 		padding-bottom: 0px;
 	}
@@ -16016,6 +16039,7 @@ figcaption {
 }
 
 .home-11-slide-padding {
+	margin-top: 200px;
 	padding-left: 20px;
 	padding-right: 200px;
 	margin-bottom: 40px;
@@ -16023,8 +16047,8 @@ figcaption {
 @media only screen and (max-width: 1199px) {
 	.home-11-slide-padding {
 		padding-right: 124px;
-
-		margin-top: 50px;
+		padding-left: 100px;
+		margin-top: 150px;
 	}
 }
 @media only screen and (max-width: 991px) {
@@ -16038,11 +16062,12 @@ figcaption {
 	.home-11-slide-padding {
 		padding-right: 50px;
 		padding-left: 50px;
-		margin-bottom: 0px;
+		margin-bottom: 40px;
 	}
 }
 @media only screen and (max-width: 576px) {
 	.home-11-slide-padding {
+		mnargin-top: 50px;
 		padding: 0px;
 		text-align: center;
 	}
