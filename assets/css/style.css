@@ -159,7 +159,7 @@ body {
 	color: var(--color-body);
 	font-weight: var(--p-regular);
 	position: relative;
-	background: #031216;
+	background: #202326;
 }
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
 	body {
@@ -16657,14 +16657,32 @@ figcaption {
 	font-size: 45px;
 	font-weight: 400;
 }
+.about-title-l {
+	font-size: 50px;
+	font-weight: 700;
+}
 @media only screen and (min-width: 768px) and (max-width: 991px) {
 	.about-title-m {
 		font-size: 26px;
 	}
+	/* .about-title-l {
+		font-size: 30px;
+	} */
 }
 @media only screen and (max-width: 767px) {
 	.about-title-m {
 		font-size: 26px;
+	}
+	.about-title-l {
+		font-size: 38px;
+	}
+}
+@media screen and (max-width: 576px) {
+	.about-title-l {
+		text-align: center;
+	}
+	.about-des-l {
+		text-align: center;
 	}
 }
 
@@ -16729,9 +16747,23 @@ figcaption {
 	border: 1px solid var(--color-border);
 	margin-top: 140px;
 }
+.rn-about-card.transparent-bg-2 {
+	background: transparent;
+	border: 1px solid var(--color-border);
+}
 @media only screen and (max-width: 1199px) {
 	.rn-about-card.transparent-bg {
-		margin-top: 0px;
+		margin-top: 100px;
+	}
+	.rn-about-card.transparent-bg-2 {
+	}
+}
+@media screen and (max-width: 991px) {
+	.rn-about-card.transparent-bg {
+		margin-top: 55px;
+	}
+	.rn-about-card.transparent-bg-2.last-box {
+		margin-top: 55px;
 	}
 }
 .rn-about-card.widge-wrapper .inner {
@@ -17754,12 +17786,14 @@ button .small-image {
 }
 .rn-collection-inner-one .collection-wrapper .collection-deg {
 	display: flex;
+	flex-direction: column; **************
 	margin-top: 15px;
 	justify-content: space-between;
-	align-items: center;
+	/* align-items: center; */
 }
 .rn-collection-inner-one .collection-wrapper .collection-deg h6 {
-	margin: 0;
+	margin-top: 15px;
+	margin-bottom: 10px;
 	font-weight: 400;
 	transition: var(--transition);
 }
@@ -22516,9 +22550,17 @@ p.subtitle {
 	max-width: 50%;
 	margin: auto;
 }
+
+p.subtitle-2 {
+	padding-right: 150px;
+}
 @media only screen and (max-width: 1199px) {
 	p.subtitle {
 		max-width: 80%;
+	}
+	p.subtitle-2 {
+		padding-right: 0;
+		margin-bottom: 20px;
 	}
 }
 @media only screen and (max-width: 767px) {
