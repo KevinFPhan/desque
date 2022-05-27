@@ -15896,7 +15896,7 @@ figcaption {
 }
 @media screen and (max-width: 991px) {
 	.footer-right {
-		height: 50%;
+		max-height: 65%;
 	}
 }
 @media screen and (max-width: 576px) {
@@ -15905,6 +15905,7 @@ figcaption {
 	}
 	.footer-right {
 		height: 70%;
+		max-height: 70%;
 	}
 }
 
@@ -15935,21 +15936,34 @@ figcaption {
 
 .banner-right-feature-product .single-slide-product {
 	width: 28%;
-	padding: 15px;
+	padding: 0px 40px 40px 0px ;
 	/* width: 450px; */
 	height: 60%;
+	min-height: 300px;
+}
+.banner-right-feature-product .single-slide-product-2 {
+	max-width: 50%;
+	padding: 15px;
+	width: 450px;
+	height: 50%;
 }
 @media screen and (max-width: 991px) {
 	.banner-right-feature-product .single-slide-product {
+		min-height: 0px;
 		width: 33%;
+		padding: 0px 20px 40px 20px;
 	}
 	.hero-right {
 		right: 0px;
+	}
+	.home-11-slide-padding-2 {
+		padding-top: 20px;
 	}
 }
 @media screen and (max-width: 767px) {
 	.banner-right-feature-product .single-slide-product {
 		width: 100%;
+		padding: 0px 20px 30px 20px;
 	}
 }
 @media only screen and (max-width: 576px) {
@@ -15961,8 +15975,14 @@ figcaption {
 	.banner-right-feature-product .single-slide-product {
 		height: 40%;
 		width: 100%;
-		padding-bottom: 0px;
+
+		padding-bottom: 40px;
 	}
+	.banner-right-feature-product .single-slide-product-2 {
+		height: 25%;
+		max-width: 100%;
+	}
+	
 }
 
 @media only screen and (max-width: 1199px) {
@@ -16039,16 +16059,32 @@ figcaption {
 }
 
 .home-11-slide-padding {
-	margin-top: 200px;
+	margin-top: 250px;
 	padding-left: 20px;
 	padding-right: 200px;
 	margin-bottom: 40px;
+}
+.home-11-slide-padding-2 {
+	padding-left: 20px;
+	padding-right: 200px;
+	margin-bottom: 40px;
+}
+@media screen and (max-width: 2100px) {
+	.home-11-slide-padding {
+	margin-top: 150px;
+	padding-left: 20px;
+	padding-right: 200px;
+	margin-bottom: 40px;
+}
 }
 @media only screen and (max-width: 1199px) {
 	.home-11-slide-padding {
 		padding-right: 124px;
 		padding-left: 100px;
 		margin-top: 150px;
+	}
+	.home-11-slide-padding-2 {
+		padding-right: 50px;
 	}
 }
 @media only screen and (max-width: 991px) {
@@ -16070,6 +16106,10 @@ figcaption {
 		mnargin-top: 50px;
 		padding: 0px;
 		text-align: center;
+	}
+	.home-11-slide-padding-2 {
+		text-align: center;
+		padding: 20px;
 	}
 }
 
@@ -25725,16 +25765,17 @@ body.active-light-mode {
 	.slider-area {
 		height: calc(100vh - 101px);
 	}
+	.footer-area {
+		height: calc(100vh - 202px);
+		min-height: 900px;
+	}
 }
 @media screen and (max-width: 992px) {
 	.slider-area {
 		height: calc(100vh - 101px);
 		min-height: 900px;
 	}
-	.footer-area {
-		height: calc(100vh - 101px);
-		min-height: 900px;
-	}
+	
 }
 
 .footer-area {
