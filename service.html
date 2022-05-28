@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="utf-8" />
 		<meta http-equiv="x-ua-compatible" content="ie=edge" />
-		<title>Services || Desque</title>
+		<title>Service || Desque</title>
 		<meta name="robots" content="noindex, follow" />
 		<meta name="description" content="" />
 		<meta
@@ -43,20 +43,6 @@
 				<div class="header-inner">
 					<div class="header-left">
 						<div id="DesqueLogo"></div>
-						<!-- <div
-							class="logo-thumbnail  flex-shrink-0 logo-custom-css"
-						>
-							<a class="logo-light" href="index.html"
-								><img
-									src="https://desque.sfo3.cdn.digitaloceanspaces.com/desque/TheDesque_Logo1.png"
-									alt="nft-logo"
-							/></a>
-							<a class="logo-dark" href="index.html"
-								><img
-									src="https://desque.sfo3.cdn.digitaloceanspaces.com/desque/TheDesque_Logo1.png"
-									alt="nft-logo"
-							/></a>
-						</div> -->
 					</div>
 					<div class="header-middle">
 						<div class="mainmenu-wrapper">
@@ -219,11 +205,11 @@
 		<!-- About banner area End -->
 
 		<div class="rn-section-gapTop2 rn-section-pad2">
-			<div class="container hero-inner">
-				<div class="row text-center">
+			<div class="container">
+				<div class="row">
 					<h3>Our Approach</h3>
 				</div>
-				<div class="row text-center">
+				<div class="row">
 					<p>
 						Lorem ipsum dolor sit amet consectetur adipisicing elit.
 						Ipsa architecto sunt quo distinctio ea veniam sed harum
@@ -731,9 +717,61 @@
 		<script src="assets/js/vendor/jquery.custom-file-input.js"></script>
 		<script src="assets/js/vendor/savePopup.js"></script>
 		<script src="assets/js/vendor/vanilla.tilt.js"></script>
+		<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
 
 		<!-- main JS -->
 		<script src="assets/js/main.js"></script>
+		<script>
+			// Swiper JS
+			const swiper = new Swiper('.mySwiper', {
+				// slideToClickedSlide: true,
+				// Optional parameters
+				loop: true,
+				// loopedSlides: 4,
+				slidesPerView: 'auto',
+				spaceBetween: 40,
+				centeredSlides: true,
+				// If we need pagination
+				pagination: {
+					el: '.swiper-pagination',
+					clickable: true,
+				},
+
+				// Navigation arrows
+				navigation: {
+					nextEl: '.swiper-button-next',
+					prevEl: '.swiper-button-prev',
+				},
+			});
+
+			// Logo Animation
+			const logo1 = document.getElementById('DesqueLogo');
+			var anim;
+			var animData = {
+				container: document.getElementById('DesqueLogo'),
+				renderer: 'svg',
+				loop: false,
+				autoplay: false,
+				rendererSettings: {
+					progressiveLoad: false,
+				},
+				path: 'DesqueLogo.json',
+			};
+			anim = bodymovin.loadAnimation(animData);
+			anim.setSpeed(1);
+
+			logo1.addEventListener('mouseover', () => {
+				anim.setSpeed(3);
+				anim.setDirection(1);
+				anim.play();
+			});
+
+			logo1.addEventListener('mouseleave', () => {
+				anim.setSpeed(3);
+				anim.setDirection(-1);
+				anim.play();
+			});
+		</script>
 		<!-- Meta Mask  -->
 		<script src="assets/js/vendor/web3.min.js"></script>
 		<script src="assets/js/vendor/maralis.js"></script>

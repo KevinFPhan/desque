@@ -867,19 +867,9 @@
 	imJs.m();
 })(jQuery, window);
 
-// Logo Animation
-// const logo = document.getElementById('DesqueLogo');
-// const logo2 = document.querySelector('.logo-thumbnail');
-
-// logo.addEventListener('mouseover', () => {
-
-// 	if (logo2.classList.contains('logo2-animation2')) {
-// 		logo2.classList.remove('logo2-animation2');
-// 	} else {
-// 		logo2.classList.add('logo2-animation');
-// 	}
-// });
-// logo.addEventListener('mouseleave', () => {
-// 	logo2.classList.add('logo2-animation2');
-// 	logo2.classList.remove('logo2-animation');
-// });
+const activePage = window.location.pathname;
+const navLinks = document.querySelectorAll('nav a').forEach((link) => {
+	if (link.href.includes(`${activePage}`)) {
+		link.classList.add('active-nav');
+	}
+});
