@@ -23540,6 +23540,17 @@ hr.form-ans-separator {
 }
 
 /*----------------------------------
+        	Desque Edit
+-----------------------------------*/
+
+
+
+
+
+
+
+
+/*----------------------------------
     White Version Demo  
 -----------------------------------*/
 body.active-light-mode {
@@ -25891,8 +25902,6 @@ body.active-light-mode {
 	background-size: cover;
 	width: 100%;
 	height: 100%;
-	/* object-fit: cover; */
-	/* object-position: top; */
 	position: absolute;
 	border-radius: 20px;
 }
@@ -26377,3 +26386,272 @@ body.active-light-mode {
 .active-nav {
 	color: var(--color-primary) !important;
 }
+
+
+/*********************** Service Page  *************************/
+.service-cards {
+	height: 750px;
+	width: 384px;
+	margin: 0px 60px;
+	position: relative;
+}
+
+.sv-card-details {
+	position: relative;
+	top: 45%;
+	left: 40px;
+}
+.sv-card-details ul li {
+	list-style: none;
+}
+.sv-card-details ul {
+	padding-left: 20px;
+}
+
+.sv-card-1 {
+	/* filter: grayscale(0%); */
+	background: url('https://desque.sfo3.cdn.digitaloceanspaces.com/desque/assets/Service/Branding_Active.png');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	/* transition: all 0.4 ease-in-out; */
+	/* -webkit-transition: all 0.4s ease-in-out; */
+  	/* -moz-transition: all 0.4s ease-in-out; */
+}
+.sv-card-2 {
+	filter: grayscale(0);
+	background: url('https://desque.sfo3.cdn.digitaloceanspaces.com/desque/assets/Service/Design_Active.png');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+.sv-card-3 {
+	filter: grayscale(0);
+	background: url('https://desque.sfo3.cdn.digitaloceanspaces.com/desque/assets/Service/Development_Active.png');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+
+.service-cards:hover .sv-card-1 {
+	/* filter: grayscale(100%); */
+	/* transition: all 0.4 ease-in-out; */
+	/* -webkit-filter: grayscale(100%); */
+  	/* -moz-filter: grayscale(100%); */
+	background: url('https://desque.sfo3.cdn.digitaloceanspaces.com/desque/assets/Service/Branding.png');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	animation: fadeIn2 0.4s ease-in forwards;
+}
+.service-cards:hover .sv-card-2 {
+	background: url('https://desque.sfo3.cdn.digitaloceanspaces.com/desque/assets/Service/Design.png');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	animation: fadeIn2 0.4s ease-in;
+}
+.service-cards:hover .sv-card-3 {
+	background: url('https://desque.sfo3.cdn.digitaloceanspaces.com/desque/assets/Service/Development.png');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	animation: fadeIn2 0.4s ease-in;
+}
+
+@media screen and (max-width: 1526px) {
+	.service-cards:last-child {
+		margin-top: 100px;
+	}
+}
+
+@media screen and (max-width: 1022px) {
+	.service-cards:not(:first-child) {
+		margin-top: 100px;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.service-cards {
+		width: 297px;
+		height: 580px;
+		margin: 0;
+	}
+}
+
+.swiper.swiper-service {
+	/* max-width: 1400px; */
+	/* width: 100%; */
+	height: 600px;
+	border-top: 1px solid var(--background-color-1);
+	/* border-bottom: 1px solid var(--background-color-1); */
+	/* position: relative; */
+	/* overflow: hidden; */
+}
+
+.swiper-wrapper.swiper-service {
+	
+}
+
+.swiper-slide.swiper-service {
+	/* position: relative; */
+	display: flex;
+	flex-direction: column;
+	/* justify-content: center; */
+	align-items: start;
+	text-align: left;
+	width: 70%;
+	left: 30%;
+	top: 60px;
+	padding: 0px 0px 0px 100px;
+	height: 100%;
+}
+
+.swiper-slide.swiper-service h3 {
+	margin: 0px 0px 10px;
+	opacity: 0;
+  	transform: translate3d(20px, 0, 0);
+  	transition: 0.3s ease 0.1s;
+}
+
+.swiper-slide.swiper-service p {
+	font-size: 18px !important;
+	font-weight: 400 !important;
+	opacity: 0;
+  	transform: translate3d(20px, 0, 0);
+ 	transition: 0.3s ease 0.2s;
+}
+
+.swiper-service .swiper-slide-active h3 {
+	opacity: 1;
+  	transform: translate3d(0, 0, 0);
+  	transition: 0.4s ease 0.6s;
+}
+.swiper-service .swiper-slide-active p {
+ 	opacity: 1;
+  	transform: translate3d(0, 0, 0);
+  	transition: 0.4s ease 0.7s;
+}
+
+.swiper-pagination.swiper-service {
+	left: 10px;
+	top: 310px;
+	/*  */
+	/* height: 100%;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    font-style: italic;
+    font-weight: 300;
+    font-size: 18px;
+    z-index: 1; */
+}
+
+/* .swiper-pagination::before.swiper-service {
+	content: "";
+      position: absolute;
+      left: -30px;
+      top: 0;
+      height: 100%;
+      width: 1px;
+      background-color: rgba($white, .2);
+} */
+
+.swiper-service .swiper-pagination-bullets .swiper-pagination-bullet {	
+	user-select: none;
+	padding: 20px 5px;
+	border-radius: 0;
+	width: fit-content;
+	height: 30px;
+	text-align: center;
+	line-height: 30px;
+	font-size: 18px;
+	color:var(--color-body);
+	opacity: 1;
+	background: none;
+
+	/* width: auto;
+	height: auto;
+	text-align: center;
+	opacity: 1;
+	background: transparent;
+	color: var(--color-danger);
+	margin: 15px 0!important;
+	position: relative; */
+}
+
+/* .swiper-service .swiper-pagination-bullets .swiper-pagination-bullet::before {
+	  content: "";
+        position: absolute;
+        top: 8px;
+        left: -32.5px;
+        width: 6px;
+        height: 6px;
+        border-radius: 100%;
+        background-color: var(--color-primary);
+        transform: scale(0);
+        transition: .2s;
+} */
+
+.swiper-service .swiper-pagination-bullets .swiper-pagination-bullet-active {
+	color: var(--color-primary);
+	transition: color 0.2s ease-in;
+}
+
+.swiper-service.service-areas {
+	position: relative;
+	margin-top: 90px;
+	width: fit-content;
+}
+
+/* .swiper-service.service-areas::after {
+	content: '';
+	position: absolute;
+	height: 1000px;	
+	width: 1px;
+	background: var(--background-color-1);
+	right: -50px;
+	top: -200px;
+} */
+
+.swiper-service.service-areas ul li {
+	list-style: none;
+	width: fit-content;
+}
+
+.swiper-service.service-areas ul {
+	padding-left: 0px;
+	width: fit-content;
+	visibility: hidden;
+}
+
+@media screen and (max-width: 991px){
+	.swiper-slide.swiper-service {
+		top: 50px;
+		padding: 0px 30px 0px 100px;
+	}
+}
+ 
+@media screen and (max-width: 767px) {
+	.swiper-slide.swiper-service p {
+		font-size: 16px !important;
+		font-weight: 400 !important;
+	}	
+	.swiper-service .swiper-pagination-bullets .swiper-pagination-bullet {
+		font-size: 16px !important;
+	}
+}
+
+
+
