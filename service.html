@@ -42,7 +42,12 @@
 
 	<body class="template-color-1 nft-body-connect">
 		<!-- start header area -->
-		<header class="rn-header haeder-default header--sticky">
+		<header
+			class="rn-header haeder-default header--sticky"
+			data-sal="slide-up"
+			data-sal-duration="800"
+			data-sal-delay="150"
+		>
 			<div class="container-fluid">
 				<div class="header-inner">
 					<div class="header-left">
@@ -182,7 +187,7 @@
 							class="title about-title-l"
 							data-sal="slide-up"
 							data-sal-duration="800"
-							data-sal-delay="150"
+							data-sal-delay="450"
 						>
 							What We Do
 						</h1>
@@ -190,7 +195,7 @@
 							class="description-d about-des-l"
 							data-sal="slide-up"
 							data-sal-duration="800"
-							data-sal-delay="150"
+							data-sal-delay="450"
 						>
 							We play to our strengths: ideating, creating and
 							shipping amazing things
@@ -713,7 +718,7 @@
 			];
 			const swiper = new Swiper('.mySwiper', {
 				// Optional parameters
-				direction: 'vertical',
+				direction: 'horizontal',
 				// If we need pagination
 				// speed: 600,
 				effect: 'fade',
@@ -750,7 +755,11 @@
 					// 	);
 					// },
 				},
-
+				breakpoints: {
+					576: {
+						direction: 'vertical',
+					},
+				},
 				// Navigation arrows
 				navigation: {
 					nextEl: '.swiper-button-next',
