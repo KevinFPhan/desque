@@ -44,7 +44,7 @@
 		<!-- start header area -->
 		<header
 			class="rn-header haeder-default header--sticky"
-			data-sal="slide-up"
+			data-sal="fade"
 			data-sal-duration="800"
 			data-sal-delay="150"
 		>
@@ -214,7 +214,12 @@
 		<!-- About banner area End -->
 
 		<!-- start service cards  -->
-		<section class="rn-service-card rn-section-gapTop2">
+		<section
+			class="rn-service-card rn-section-gapTop2"
+			data-sal="slide-up"
+			data-sal-duration="800"
+			data-sal-delay="450"
+		>
 			<div
 				class="container-fluid d-flex justify-content-center flex-wrap"
 			>
@@ -277,6 +282,9 @@
 		<!-- Start Service Vertical Carousel  -->
 		<section
 			class="swiper swiper-service mySwiper rn-section-gapTop container"
+			data-sal="slide-up"
+			data-sal-duration="800"
+			data-sal-delay="250"
 		>
 			<div class="swiper-service service-areas">
 				<h3>Our Approach</h3>
@@ -581,11 +589,6 @@
 									<div
 										class="d-flex flex-column h-100 w-100 justify-content-sm-end justify-content-center align-items-sm-start align-items-center"
 									>
-										<span
-											class="product-name-3 large-product-title"
-											>Follow</span
-										>
-
 										<ul class="social-copyright">
 											<li>
 												<a href="#"
@@ -621,6 +624,10 @@
 												></a>
 											</li>
 										</ul>
+										<span
+											class="product-name-3 large-product-title"
+											>Follow</span
+										>
 									</div>
 								</div>
 							</div>
@@ -722,10 +729,10 @@
 				// If we need pagination
 				// speed: 600,
 				effect: 'fade',
-				// autoplay: {
-				// 	delay: 4000,
-				// 	disableOnInteraction: false,
-				// },
+				autoplay: {
+					delay: 4000,
+					disableOnInteraction: true,
+				},
 				pagination: {
 					el: '.swiper-pagination',
 					clickable: true,
@@ -738,22 +745,6 @@
 							'</span>'
 						);
 					},
-					// paginationBulletRender: function (
-					// 	swiper,
-					// 	index,
-					// 	className
-					// ) {
-					// 	var info = document
-					// 		.querySelectorAll('.swiper-slide')
-					// 		[index].getAttribute('data-info');
-					// 	return (
-					// 		'<span class="' +
-					// 		className +
-					// 		'">' +
-					// 		info +
-					// 		'</span>'
-					// 	);
-					// },
 				},
 				breakpoints: {
 					577: {

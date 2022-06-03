@@ -90,6 +90,9 @@
 			$('.rbt-sticky-top-adjust').css({
 				top: 100,
 			});
+			$('.rbt-sticky-top-adjust-seven').css({
+				top: 250,
+			});
 			$('.rbt-sticky-top-adjust-six').css({
 				top: 150,
 			});
