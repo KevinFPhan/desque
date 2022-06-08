@@ -13601,7 +13601,7 @@ Blog style
 	transition: 0.5s all ease-in-out;
 	height: 200px;
 	/* height: auto; */
-	max-width: 330px;
+	max-width: 384px;
 }
 
 /* .rn-blog::before {
@@ -14435,8 +14435,8 @@ button.btn.btn-large {
 
 .rn-progress-parent {
 	position: fixed;
-	right: 30px;
-	bottom: 30px;
+	right: 15px;
+	bottom: 15px;
 	height: 46px;
 	width: 46px;
 	cursor: pointer;
@@ -15956,9 +15956,10 @@ figcaption {
 	width: 28%;
 	padding: 0px 40px 40px 0px;
 	/* width: 450px; */
-	height: 60%;
-	min-height: 300px;
+	height: 50%;
+	min-height: 250px;
 }
+
 .banner-right-feature-product .single-slide-product-2 {
 	max-width: 50%;
 	padding: 15px;
@@ -16087,16 +16088,20 @@ figcaption {
 	margin-bottom: 40px;
 }
 @media screen and (max-width: 2100px) {
-	.home-11-slide-padding {
+	/* .home-11-slide-padding {
 		margin-top: 150px;
 		padding-left: 20px;
 		padding-right: 200px;
 		margin-bottom: 40px;
-	}
+	} */
 }
 @media screen and (max-width: 1600px) {
 	.home-11-slide-padding {
 		margin-top: 100px;
+		margin-bottom: 0px;
+	}
+	.banner-right-feature-product .single-slide-product {
+		padding: 0px 20px 20px 0px;
 	}
 }
 @media only screen and (max-width: 1199px) {
@@ -16740,12 +16745,12 @@ figcaption {
 	}
 }
 @media screen and (max-width: 576px) {
-	.about-title-l {
-		text-align: center;
+	/* .about-title-l {
+		padding-left: 50px;
 	}
 	.about-des-l {
-		text-align: center;
-	}
+		padding-left: 50px;
+	} */
 }
 
 .about-fluidimg {
@@ -16803,7 +16808,7 @@ figcaption {
 
 .rn-about-card {
 	border: 1px solid var(--color-border);
-	background: #191925;
+	background: var(--background-color-1);
 	padding: 50px 40px;
 	border-radius: 5px;
 }
@@ -16838,7 +16843,7 @@ figcaption {
 	margin-bottom: 0;
 }
 .rn-about-card .inner h3 {
-	font-weight: 400;
+	font-weight: 500;
 	margin-bottom: 15px;
 	line-height: var(--h1);
 }
@@ -17013,20 +17018,38 @@ figcaption {
 }
 .form-wrapper-one input,
 .form-wrapper-one textarea {
-	background: var(--background-color-4);
+	background: none;
 	height: 50px;
-	border-radius: 5px;
 	color: var(--color-white);
 	font-size: 14px;
 	padding: 10px 20px;
 	border: 2px solid var(--color-border);
 	transition: 0.3s;
 }
+
 .form-wrapper-one input:focus,
 .form-wrapper-one textarea:focus {
-	border: 2px solid var(--color-primary) !important;
+	border-bottom: 2px solid var(--color-primary) !important;
+	/* animation: borderBottomAnim 1s ease-in; */
+	border-top: 2px solid var(--color-border) !important;
+	/* border-top: 2px solid var(--color-border) !important; */
+	border-left: 2px solid var(--color-border) !important;
+	border-right: 2px solid var(--color-border) !important;
 	box-shadow: none;
-	background: var(--background-color-4);
+	/* background: var(--background-color-4); */
+}
+
+@keyframes borderBottomAnim {
+	0% {
+		border-bottom: 2px solid var(--color-primary);
+		transform: scaleX(0);
+		transform-origin: left;
+	}
+	100% {
+		border-bottom: 2px solid var(--color-primary);
+		transform: scaleX(1);
+		/* transform-origin: left; */
+	}
 }
 .form-wrapper-one textarea {
 	min-height: 100px;
@@ -17871,17 +17894,23 @@ button .small-image {
 .rn-collection-inner-one .collection-wrapper .collection-deg {
 	display: flex;
 	flex-direction: column;
-	margin-top: 20px;
+	margin-top: 15px;
 	justify-content: space-between;
 	/* align-items: center; */
 }
-.rn-collection-inner-one .collection-wrapper .collection-deg h6 {
-	margin-top: 15px;
+.rn-collection-inner-one .collection-wrapper .collection-deg h5 {
+	margin-top: 5px;
 	margin-bottom: 10px;
 	font-weight: 400;
 	transition: var(--transition);
 }
-.rn-collection-inner-one .collection-wrapper .collection-deg h6:hover {
+.rn-collection-inner-one .collection-wrapper .collection-deg h4 {
+	margin-top: 5px;
+	margin-bottom: 10px;
+	font-weight: 400;
+	transition: var(--transition);
+}
+.rn-collection-inner-one .collection-wrapper .collection-deg h5:hover {
 	color: var(--color-primary);
 }
 .rn-collection-inner-one .collection-wrapper .collection-deg span.items {
@@ -20721,10 +20750,10 @@ body.modal-open {
 .widge-wrapper .inner {
 	margin-bottom: 30px;
 }
-.widge-wrapper h3 {
+/* .widge-wrapper h3 {
 	font-weight: 500;
 	font-size: 18px;
-}
+} */
 
 .mb_dec--50 {
 	margin-bottom: -50px;
@@ -25832,7 +25861,7 @@ body.active-light-mode {
 
 .slider-area {
 	height: calc(100vh - 81px);
-	min-height: 750px;
+	min-height: 650px;
 	position: relative;
 }
 
@@ -25887,7 +25916,7 @@ body.active-light-mode {
 	border-radius: 20px;
 }
 
-.swiper-slide-img-1 {
+.swiper-slide-img-8 {
 	background: url('https://desque.sfo3.cdn.digitaloceanspaces.com/desque/assets/Carousel/EnergyCinq.png');
 	background-position: center;
 	background-repeat: no-repeat;
@@ -25929,7 +25958,7 @@ body.active-light-mode {
 	background-repeat: no-repeat;
 	background-size: cover;
 }
-.swiper-slide-img-8 {
+.swiper-slide-img-1 {
 	background: url('https://desque.sfo3.cdn.digitaloceanspaces.com/desque/assets/Carousel/Sapa.png');
 	background-position: center;
 	background-repeat: no-repeat;
@@ -25992,6 +26021,7 @@ body.active-light-mode {
 	position: absolute;
 	display: block;
 	height: 1px;
+	/* background: rgb(71, 0, 71); */
 	background: #16b2c3;
 	left: 15%;
 }
@@ -26006,14 +26036,14 @@ body.active-light-mode {
 
 .swiper-slide.swiper-home p {
 	margin: 0 !important;
-	font-size: 14px !important;
+	font-size: 16px !important;
 }
 
 .swiper-slide-active.swiper-home {
 	animation: fadeIn2 0.4s ease-in;
 }
 
-.swiper-slide-active .swiper-slide-img-1 {
+.swiper-slide-active .swiper-slide-img-8 {
 	background: linear-gradient(
 			to top,
 			rgba(0, 0, 0, 1),
@@ -26118,7 +26148,7 @@ body.active-light-mode {
 	transform: scale(1.1, 1.1);
 	transition: transform 0.2s ease-in;
 }
-.swiper-slide-active .swiper-slide-img-8 {
+.swiper-slide-active .swiper-slide-img-1 {
 	background: linear-gradient(
 			to top,
 			rgba(0, 0, 0, 1),
@@ -26304,8 +26334,11 @@ body.active-light-mode {
 /* Testimonial Carousel  */
 .swiper.swiper-about {
 	width: 100%;
-	height: auto;
-	/* background: #fff; */
+	/* max-width: 1800px; */
+	/* height: 300px; */
+	/* background-color: white; */
+	/* padding-top: 80px; */
+
 }
 .swiper-slide.swiper-about {
 	height: 100%;
@@ -26313,6 +26346,16 @@ body.active-light-mode {
 	/* display: flex;
 	align-items: center;
 	justify-content: center; */
+}
+.swiper-about .swiper-button-next,
+.swiper-about .swiper-button-prev {
+	color: var(--color-primary);
+}
+.swiper-about .swiper-button-next {
+	/* top: 30px; */
+}
+.swiper-about .swiper-button-prev {
+	/* top: 30px; */
 }
 /********************* Footer *******************/
 .footer-area p {
@@ -26792,4 +26835,176 @@ body.active-light-mode {
 .home-11-slide-padding-2 h1.title {
 	position: relative;
 	top: 20%;
+}
+
+.active-light-mode .swiper-slide-active .swiper-slide-img-1 {
+	background: linear-gradient(
+			to top,
+			#c7c7c7,
+			rgba(255, 0, 0, 0),
+			transparent
+		),
+		url('https://desque.sfo3.cdn.digitaloceanspaces.com/desque/assets/Carousel/EnergyCinq-Active.png');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	z-index: -1;
+	transform: scale(1.1, 1.1);
+	transition: transform 0.2s ease-in;
+}
+.active-light-mode .swiper-slide-active .swiper-slide-img-2 {
+	background: linear-gradient(
+			to top,
+			#c7c7c7,
+			rgba(255, 0, 0, 0),
+			transparent
+		),
+		url('https://desque.sfo3.cdn.digitaloceanspaces.com/desque/assets/Carousel/Epic-Active.png');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	z-index: -1;
+	transform: scale(1.1, 1.1);
+	transition: transform 0.2s ease-in;
+}
+.active-light-mode .swiper-slide-active .swiper-slide-img-3 {
+	background: linear-gradient(
+			to top,
+			#c7c7c7,
+			rgba(255, 0, 0, 0),
+			transparent
+		),
+		url('https://desque.sfo3.cdn.digitaloceanspaces.com/desque/assets/Carousel/Exotico-Active.png');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	z-index: -1;
+	transform: scale(1.1, 1.1);
+	transition: transform 0.2s ease-in;
+}
+.active-light-mode .swiper-slide-active .swiper-slide-img-4 {
+	background: linear-gradient(
+			to top,
+			#c7c7c7,
+			rgba(255, 0, 0, 0),
+			transparent
+		),
+		url('https://desque.sfo3.cdn.digitaloceanspaces.com/desque/assets/Carousel/InstinctAthletics-Active.png');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	z-index: -1;
+	transform: scale(1.1, 1.1);
+	transition: transform 0.2s ease-in;
+}
+.active-light-mode .swiper-slide-active .swiper-slide-img-5 {
+	background: linear-gradient(
+			to top,
+			#c7c7c7,
+			rgba(255, 0, 0, 0),
+			transparent
+		),
+		url('https://desque.sfo3.cdn.digitaloceanspaces.com/desque/assets/Carousel/Naran-Active.png');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	z-index: -1;
+	transform: scale(1.1, 1.1);
+	transition: transform 0.2s ease-in;
+}
+.active-light-mode .swiper-slide-active .swiper-slide-img-6 {
+	background: linear-gradient(
+			to top,
+			#c7c7c7,
+			rgba(255, 0, 0, 0),
+			transparent
+		),
+		url('https://desque.sfo3.cdn.digitaloceanspaces.com/desque/assets/Carousel/Nuletica-Active.png');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	z-index: -1;
+	transform: scale(1.1, 1.1);
+	transition: transform 0.2s ease-in;
+}
+.active-light-mode .swiper-slide-active .swiper-slide-img-7 {
+	background: linear-gradient(
+			to top,
+			#c7c7c7,
+			rgba(255, 0, 0, 0),
+			transparent
+		),
+		url('https://desque.sfo3.cdn.digitaloceanspaces.com/desque/assets/Carousel/Pokeology-Active.png');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	z-index: -1;
+	transform: scale(1.1, 1.1);
+	transition: transform 0.2s ease-in;
+}
+.active-light-mode .swiper-slide-active .swiper-slide-img-8 {
+	background: linear-gradient(
+			to top,
+			#c7c7c7,
+			rgba(255, 0, 0, 0),
+			transparent
+		),
+		url('https://desque.sfo3.cdn.digitaloceanspaces.com/desque/assets/Carousel/Sapa-Active.png');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	z-index: -1;
+	transform: scale(1.1, 1.1);
+	transition: transform 0.2s ease-in;
+}
+.active-light-mode .swiper-slide-active .swiper-slide-img-9 {
+	background: linear-gradient(
+			to top,
+			#c7c7c7,
+			rgba(255, 0, 0, 0),
+			transparent
+		),
+		url('https://desque.sfo3.cdn.digitaloceanspaces.com/desque/assets/Carousel/Sunrgy-Active.png');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	z-index: -1;
+	transform: scale(1.1, 1.1);
+	transition: transform 0.2s ease-in;
+}
+.active-light-mode .swiper-slide-active .swiper-slide-img-10 {
+	background: linear-gradient(
+			to top,
+			#c7c7c7,
+			rgba(255, 0, 0, 0),
+			transparent
+		),
+		url('https://desque.sfo3.cdn.digitaloceanspaces.com/desque/assets/Carousel/UptownBakes-Active.png');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	z-index: -1;
+	transform: scale(1.1, 1.1);
+	transition: transform 0.2s ease-in;
+}
+
+.active-light-mode .swiper-slide.swiper-home p {
+	color: #181c32;
+}
+
+.rn-contact-top-area h1 {
+	margin-bottom: 30px;
+}
+
+.rn-not-found-area {
+	height: calc(100vh - 150px);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+@media screen and (max-width: 576px) {
+	.rn-blog {
+		max-width: 280px;
+	}
 }
