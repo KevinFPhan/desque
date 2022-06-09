@@ -26309,7 +26309,7 @@ body.active-light-mode {
 		top: 87%;
 	}
 	.swiper-slide.swiper-home .swiper--logo {
-		margin-bottom: 80px;
+		margin-bottom: 110px;
 	}
 }
 @keyframes fadeInDownC {
@@ -26630,11 +26630,7 @@ body.active-light-mode {
 	height: 100%;
 }
 
-.service-cards:hover .sv-card-1 {
-	/* filter: grayscale(100%); */
-	/* transition: all 0.4 ease-in-out; */
-	/* -webkit-filter: grayscale(100%); */
-	/* -moz-filter: grayscale(100%); */
+/* .service-cards:hover .sv-card-1 {
 	background: url('https://desque.sfo3.cdn.digitaloceanspaces.com/desque/assets/Service/Branding.png');
 	background-position: center;
 	background-repeat: no-repeat;
@@ -26654,7 +26650,7 @@ body.active-light-mode {
 	background-repeat: no-repeat;
 	background-size: cover;
 	animation: fadeIn2 0.4s ease-in;
-}
+} */
 
 @media screen and (max-width: 1800px) {
 	.service-cards {
