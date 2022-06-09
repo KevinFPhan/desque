@@ -62,6 +62,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
 @import url("https://use.typekit.net/qaw0att.css");
+@font-face {
+	font-family: 'abeatbyKai', sans-serif;
+	src: url("https://desque.sfo3.cdn.digitaloceanspaces.com/desque/assets/fonts/ABEAKRG.TTF");
+}
 :root {
 	--color-primary: #16b2c3;
 	--color-primary-light: #63e4f6;
@@ -25892,12 +25896,12 @@ body.active-light-mode {
 	transition: 0.5s cubic-bezier(0, 0, 0.12, 1) ;
 }
 
-#DesqueLogo:hover::after {
-	/* animation: logoSlide 1s cubic-bezier(0, 0, 0.12, 1) 600ms forwards; */
+/* #DesqueLogo:hover::after {
+	animation: logoSlide 1s cubic-bezier(0, 0, 0.12, 1) 600ms forwards;
 	transform: translate3d(20px, 0, 0);
 	transition: 0.5s cubic-bezier(0, 0, 0.12, 1)  ;
 	opacity: 1;
-}
+} */
 
 @keyframes logoSlide {
 	0% {
@@ -26816,7 +26820,7 @@ body.active-light-mode {
 		font-size: 16px !important;
 	}
 	.swiper-slide.swiper-service {
-		padding: 0px 40px 0px 100px;
+		padding: 0px 0px 0px 100px;
 	}
 }
 
@@ -26828,13 +26832,13 @@ body.active-light-mode {
 		margin-top: 30px;
 	}
 	.swiper-slide.swiper-service {
-		padding: 210px 50px 0px;
+		padding: 240px 50px 0px;
 	}
 	.swiper-pagination.swiper-service {
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
 		left: 8%;
-		top: 150px;
+		top: 100px;
 		bottom: inherit; *****
 	}
 }
@@ -27037,4 +27041,28 @@ body.active-light-mode {
 .footer-action {
 	opacity: 0;
 	transform: translateY(40px);
+}
+
+@media screen and (max-width: 767px) {
+	.footer-action {
+	transform: translateY(50px);
+	}
+	.footer-action h5 {
+		padding-top: 5px;
+	}
+}
+
+.ml12 {
+	font-family: 'abeatbyKai', sans-serif;
+  font-weight: 200;
+  font-size: 2em;
+  text-transform: lowercase;
+  letter-spacing: 0.2em;
+  padding-top: 18px;
+  padding-left: 20px;
+}
+
+.ml12 .letter {
+  display: inline-block;
+  line-height: 1em;
 }
