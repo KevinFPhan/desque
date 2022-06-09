@@ -36,7 +36,7 @@
 31. Collection
 32. Footer
 33. Copyright
-34. Portfolio
+34. Portfoliof
 35. Product Details
 36. Swicher
 37. Social Share
@@ -73,6 +73,7 @@
 	--color-gray: #fafafa;
 	--color-gray-2: #ffffff;
 	--color-gray-dark: #c7c7c7;
+	--color-gray-dark2: #e6e6e6;
 	--color-subtitle: #f9004d;
 	--background-color-1: #2d383c;
 	--background-color-2: #fafafa;
@@ -18488,10 +18489,10 @@ button .small-image {
 .product-style-one:hover::before {
 	transform: scale(1.03, 1.04);
 }
-.product-style-one:hover span, 
-.product-style-one:hover ul {
-	animation: fadeInUpC2 0.4s cubic-bezier(0, 0, 0.12, 1) forwards;
-	/* animation: fadeInUpC 0.3s ease-out forwards; */
+.product-style-one:hover .footer-action , 
+.product-style-one:hover .footer-action {
+	/* animation: fadeInUpC2 0.4s cubic-bezier(0, 0, 0.12, 1) forwards; */
+	animation: fadeInUpC 0.3s cubic-bezier(0, 0, 0.1, 1) forwards;
 }
 .product-style-one.with-placeBid .card-thumbnail {
 	position: relative;
@@ -18620,6 +18621,11 @@ button .small-image {
 .product-style-one a .product-name2:hover,
 .product-style-one:hover .product-name-3 {
 	color: var(--color-primary) !important;
+}
+.single-slide-product-2 .product-style-one {
+	display: flex;
+	justify-content: space-between;
+	flex-direction: column;
 }
 
 .product-style-one a .product-name.large-product-title,
@@ -22722,6 +22728,9 @@ p.subtitle {
 p.subtitle-2 {
 	padding-right: 150px;
 }
+/* h3.subtitle-2 {
+	width: 400px;
+} */
 @media only screen and (max-width: 1199px) {
 	p.subtitle {
 		max-width: 80%;
@@ -23689,7 +23698,7 @@ body.active-light-mode {
 	background: #f5f8fa;
 }
 .active-light-mode .bg-color--1 {
-	background: var(--color-white);
+	background: var(--color-gray-dark2);
 }
 .active-light-mode p,
 .active-light-mode .product-share-wrapper .profile-share a.more-author-text,
@@ -23866,6 +23875,14 @@ body.active-light-mode {
 .active-light-mode .accordion .accordion-item .accordion-header button i,
 .active-light-mode .product-style-one .product-name-3 {
 	color: var(--color-light-heading);
+}
+.active-light-mode a.btn.btn-secondary {
+	background: #fafafa;
+	color: var(--background-color-1);
+}
+.active-light-mode a.btn.btn-secondary:hover {
+	background: var(--color-primary-dark);
+	color: var(--background-color-1);
 }
 .active-light-mode
 	.share-btn-activation
@@ -24492,16 +24509,19 @@ body.active-light-mode {
 }
 
 .active-light-mode .product-style-one,
-.active-light-mode .rn-service-one,
+
 .active-light-mode .rn-collection-inner-one .collection-wrapper,
 .active-light-mode .slider-style-2 .single-slide .inner,
 .active-light-mode .slider-style-3 .slide-small-wrapper,
 .active-light-mode .tab-button-one .nav-tabs,
 .active-light-mode nav.pagination-wrapper .pagination,
 .active-light-mode .product-tab-nav .nav {
-	background: var(--color-white);
+	/* background: var(--color-white); */
+	/* background: #e0e0e0; */
 }
-
+.active-light-mode .rn-service-one {
+	background: #e6e6e6;
+}
 .active-light-mode .nice-select::after {
 	border-bottom: 2px solid var(--color-light-heading);
 	border-right: 2px solid var(--color-light-heading);
@@ -24597,7 +24617,8 @@ body.active-light-mode {
 	background: var(--color-primary);
 }
 .active-light-mode .form-wrapper-one {
-	background: var(--color-white);
+	/* background: var(--color-white); */
+	background: #e6e6e6;
 }
 .active-light-mode .form-wrapper-one input.form-control,
 .active-light-mode .form-wrapper-one textarea.form-control {
@@ -24701,7 +24722,8 @@ body.active-light-mode {
 	color: var(--color-primary);
 }
 .active-light-mode .rn-blog {
-	background: var(--color-white);
+	/* background: var(--color-white); */
+	background: #e6e6e6;
 }
 .active-light-mode .rn-blog-listen .bd-thumbnail {
 	background: var(--color-white);
@@ -24858,8 +24880,15 @@ body.active-light-mode {
 	color: var(--color-white);
 }
 .active-light-mode .rn-about-card {
-	background: var(--color-white);
-	border: none;
+	/* background: var(--color-white); */
+	background: #e6e6e6;
+	border: 1px solid var(--color-border);
+}
+.active-light-mode .rn-about-card.rn-about-card.transparent-bg, 
+.active-light-mode .rn-about-card.rn-about-card.transparent-bg-2 {
+	/* background: var(--color-white); */
+	background: none;
+	border: 1px solid #c7c7c7;
 }
 .active-light-mode .rn-about-wrapper {
 	border: none;
@@ -25560,7 +25589,8 @@ body.active-light-mode {
 	color: var(--color-white);
 }
 .active-light-mode .rn-address {
-	background: var(--color-white);
+	/* background: var(--color-white); */
+	background: #e6e6e6;
 }
 .active-light-mode .rn-address .inner p {
 	margin: 0;
@@ -25573,7 +25603,9 @@ body.active-light-mode {
 	color: var(--color-dark);
 }
 .active-light-mode .product-style-one::after {
-	background: #ffffff;
+	/* background: #ffffff; */
+	/* background: #e0e0e0; */
+	background: #c7c7c7;
 }
 .active-light-mode .product-style-one::before {
 	background-image: linear-gradient(100deg, #fff, #0398ed);
@@ -26301,6 +26333,7 @@ body.active-light-mode {
 	}
 	100% {
 		opacity: 1;
+		color: var(--color-primary);
 		transform: translateY(0);
 	}
 }
@@ -26376,7 +26409,7 @@ body.active-light-mode {
 
 /* Testimonial Carousel  */
 .swiper.swiper-about {
-	width: 100%;
+	/* width: 100%; */
 	/* max-width: 1800px; */
 	/* height: 300px; */
 	/* background-color: white; */
@@ -26723,7 +26756,7 @@ body.active-light-mode {
 	top: 310px;
 }
 
-/
+
 
 .swiper-service .swiper-pagination-bullets .swiper-pagination-bullet {
 	user-select: none;
@@ -27005,4 +27038,7 @@ body.active-light-mode {
 	transition: all 0.3s ease-in;
 }
 
-
+.footer-action {
+	opacity: 0;
+	transform: translateY(40px);
+}
