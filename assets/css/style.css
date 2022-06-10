@@ -6545,10 +6545,13 @@ button,
 select,
 textarea {
 	background: transparent;
-	border: 1px solid var(--color-border);
+	/* border: 1px solid var(--color-border); */
 	transition: all 0.4s ease-out 0s;
-	color: var(--color-body);
+	/* transform: scaleX(0);  
+ 	transition: transform 250ms ease-in-out;
+	transform-origin: left; */
 	width: 100%;
+	color: var(--color-body);
 }
 input:focus,
 input:active,
@@ -6559,7 +6562,7 @@ select:active,
 textarea:focus,
 textarea:active {
 	outline: none;
-	border-color: var(--color-primary);
+	/* border-color: var(--color-primary); */
 }
 
 button,
@@ -6590,7 +6593,7 @@ textarea {
 	padding: 0 15px;
 	outline: none;
 	border: var(--border-width) solid var(--color-border);
-	border-radius: var(--radius);
+	/* border-radius: var(--radius); */
 	/* -- Placeholder -- */
 }
 input[type='text']::placeholder,
@@ -6809,6 +6812,8 @@ input[type='number']:focus,
 input[type='tel']:focus,
 textarea:focus {
 	border-color: var(--color-primary);
+	/* border-color: var(--color-secondary); */
+	
 }
 
 input[type='checkbox'],
@@ -7844,9 +7849,12 @@ body {
 	background: var(--background-color-4) !important;
 }
 
+
+/* textarea ****** */
 textarea:focus {
-	border: 2px solid var(--color-primary) !important;
-	border-radius: 5px;
+	border-bottom: 2px solid var(--color-primary) !important;
+	transform-origin: 0% 50%;
+	/* border-radius: 5px; */
 	box-shadow: none !important;
 }
 
@@ -12130,6 +12138,7 @@ body.sal-disabled [data-sal|='flip'] {
 	flex-basis: 50%;
 }
 .haeder-default .header-left {
+	position: relative;
 	display: flex;
 	align-items: center;
 	justify-content: start;
@@ -12137,9 +12146,29 @@ body.sal-disabled [data-sal|='flip'] {
 	padding-left: 12px;
 }
 
-@media only screen and (max-width: 479px) {
+@media screen and (max-width: 1101px) {
+		.haeder-default .header-left {
+			
+			flex-basis: 10000px;
+	}
+}	
+@media screen and (max-width: 991px) {
 	.haeder-default .header-left {
-		flex-basis: 40%;
+	display: flex;
+	align-items: center;
+	flex-grow: 4;
+	justify-content: start;
+	/* flex-basis: 25%; */
+	padding-left: 12px;
+}
+}
+@media only screen and (max-width: 479px) {
+	.haeder-default .header-inner {
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+	.haeder-default .header-left {
+		/* flex-basis: 40%; */
 		padding-left: 0px;
 	}
 }
@@ -17042,18 +17071,21 @@ figcaption {
 	color: var(--color-white);
 	font-size: 14px;
 	padding: 10px 20px;
-	border: 2px solid var(--color-border);
-	transition: 0.3s;
+	border-bottom: 2px solid var(--color-border);
+	/* border: 2px solid var(--color-border); */
+	/* transition: 0.3s; */
+	/* transform: scaleX(0);   */
+ 	/* transition: transform 250ms ease-in-out; */
 }
 
 .form-wrapper-one input:focus,
 .form-wrapper-one textarea:focus {
-	border-bottom: 2px solid var(--color-primary) !important;
+	/* border-bottom: 2px solid var(--color-primary) !important; */
 	/* animation: borderBottomAnim 1s ease-in; */
-	border-top: 2px solid var(--color-border) !important;
 	/* border-top: 2px solid var(--color-border) !important; */
-	border-left: 2px solid var(--color-border) !important;
-	border-right: 2px solid var(--color-border) !important;
+	/* border-top: 2px solid var(--color-border) !important; */
+	/* border-left: 2px solid var(--color-border) !important; */
+	/* border-right: 2px solid var(--color-border) !important; */
 	box-shadow: none;
 	/* background: var(--background-color-4); */
 }
@@ -27065,4 +27097,54 @@ body.active-light-mode {
 .ml12 .letter {
   display: inline-block;
   line-height: 1em;
+}
+
+/* .contact-box {
+	position: relative;
+
+}
+.contact-box::after {
+	content: '';
+	display: block;
+	border-bottom: 2px solid red;
+	position: absolute;
+	bottom: 0;
+	left: 0px;
+	transform: scaleX(0);  
+ 	transition: transform 250ms ease-in-out;
+	transform-origin: left;
+	width: 100%;
+}
+
+input:active .contact-box::after {
+	transform-origin:  left;
+	transform: scaleX(1);
+}
+.contact-box::before {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	display: block;
+	border-bottom: 2px solid var(--color-border);
+	left: 0px;
+	width: 100%;
+}
+
+.contact-anim {
+	transform-origin:  left;
+	transform: scaleX(1);
+}
+ */
+
+.purple-box {
+	height: 500px;
+	width: 100%;
+	background: linear-gradient(
+			to right,
+			var(--color-secondary),
+			var(--color-primary-dark),
+			transparent
+		) ;
+	border-radius: 12px;
+	box-shadow: hsl(198, 39%, 29%);
 }

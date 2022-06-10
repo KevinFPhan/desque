@@ -850,7 +850,6 @@
 })(jQuery, window);
 
 const activePage = window.location.pathname;
-console.log(activePage);
 const navLinks = document.querySelectorAll('nav a').forEach((link) => {
 	if (link.href.includes(`${activePage}`)) {
 		link.classList.add('active-nav');
@@ -858,30 +857,42 @@ const navLinks = document.querySelectorAll('nav a').forEach((link) => {
 });
 
 // Wrap every letter in a span
-var textWrapper = document.querySelector('.ml12');
-textWrapper.innerHTML = textWrapper.textContent.replace(
-	/\S/g,
-	"<span class='letter'>$&</span>"
-);
+// var textWrapper = document.querySelector('.ml12');
+// textWrapper.innerHTML = textWrapper.textContent.replace(
+// 	/\S/g,
+// 	"<span class='letter'>$&</span>"
+// );
 
-anime
-	.timeline({ loop: true })
-	.add({
-		targets: '.ml12 .letter',
-		// translateX: [40, 0],
-		translateX: [-40, 0],
-		translateZ: 0,
-		opacity: [0, 1],
-		easing: 'easeOutExpo',
-		duration: 1200,
-		delay: (el, i) => 500 + 30 * i,
-	})
-	.add({
-		targets: '.ml12 .letter',
-		translateX: [0, -10],
-		// translateX: [0, -30],
-		opacity: [1, 0],
-		easing: 'easeInExpo',
-		duration: 1100,
-		delay: (el, i) => 100 + 30 * i,
-	});
+// anime
+// 	.timeline({ loop: true })
+// 	.add({
+// 		targets: '.ml12 .letter',
+// 		// translateX: [40, 0],
+// 		translateX: [-40, 0],
+// 		translateZ: 0,
+// 		opacity: [0, 1],
+// 		easing: 'easeOutExpo',
+// 		duration: 1200,
+// 		delay: (el, i) => 500 + 30 * i,
+// 	})
+// 	.add({
+// 		targets: '.ml12 .letter',
+// 		translateX: [0, -10],
+// 		// translateX: [0, -30],
+// 		opacity: [1, 0],
+// 		easing: 'easeInExpo',
+// 		duration: 1100,
+// 		delay: (el, i) => 100 + 30 * i,
+// 	});
+
+// Contact Box
+// const inputBorder = document.querySelectorAll('.contact-box');
+// const inputBorder2 = document.querySelector('.contact-box');
+// const inputBox = window.getComputedStyle(inputBorder2, '::after');
+
+// const inputd = document.querySelectorAll('input');
+// for (let i = 0; i < inputBorder.length; i++) {
+// 	inputBorder[i].addEventListener('click', function () {
+// 		inputBorder[i].classList.addClass('contact-anim');
+// 	});
+// }

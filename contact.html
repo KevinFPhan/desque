@@ -287,58 +287,67 @@
 								method="POST"
 								action=""
 							>
-								<div class="row">
-									<div class="mb-5 col-lg-6">					
-										<input
+								<div class="row ">
+									<div class="mb-5 col-lg-6">		
+										<label for="first-name" class="form-label">First Name</label>	
+										<div class="contact-box">
+											<input
 										name="first-name"
 										id="first-name"
 										type="text"
-										placeholder="First Name"
-										/><span class="position-relative"></span>
+									
+										/>
+										</div>		
+										
 									</div>
 									<div class="mb-5 col-lg-6">
+										<label for="last-name" class="form-label">Last Name</label>
 										<input
 										id="last-name"
 										name="last-name"
 										type="text"
-										placeholder="Last Name"
+						
 										/>
 									</div>
 								</div>
 
 								<div class="row">
-									<div class="mb-5 col-lg-6">					
+									<div class="mb-5 col-lg-6">		
+										<label for="email" class="form-label">Email</label>			
 										<input
 										id="email"
 										name="email"
 										type="email"
-										placeholder="Email"
+				
 										/>
 									</div>
 									<div class="mb-5 col-lg-6">
+										<label for="phone" class="form-label">Phone</label>
 										<input
-										id="phone-number"
-										name="phone-number"
+										id="phone"
+										name="phone"
 										type="text"
-										placeholder="Phone"
+						
 										/>
 									</div>
 								</div>
 								
 								<div class="mb-5">
+									<label for="role-title" class="form-label">Your role/title</label>
 									<input
 										id="role-title"
 										name="role-title"
 										type="text"
-										placeholder="Your role/title"
+				
 									/>
 								</div>
-								<div class="mb-5">
+								<div class="mb-5 contact-box">
+									<label for="contact-message" class="form-label">Message</label>
 									<textarea
 										name="contact-message"
 										id="contact-message"
 										rows="3"
-										placeholder="Message"
+			
 									></textarea>
 								</div>
 								<button
@@ -630,7 +639,6 @@
 		<script src="assets/js/vendor/scrolltrigger.js"></script>
 		<script src="assets/js/vendor/jquery.custom-file-input.js"></script>
 		<script src="assets/js/vendor/savePopup.js"></script>
-		<script src="assets/js/vendor/vanilla.tilt.js"></script>
 		<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
 
 		<!-- main JS -->
@@ -664,10 +672,6 @@
 				anim.play();
 			});
 		</script>
-		<!-- Meta Mask  -->
-		<script src="assets/js/vendor/web3.min.js"></script>
-		<script src="assets/js/vendor/maralis.js"></script>
-		<script src="assets/js/vendor/nft.js"></script>
 
 
 	</body>
