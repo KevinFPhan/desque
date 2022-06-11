@@ -863,14 +863,11 @@
 					<div class="footer-right order-2">
 						<div
 							class="banner-right-feature-product d-flex flex-wrap justify-content-end align-items-end"
-							data-sal-delay="300"
-							data-sal="slide-up"
-							data-sal-duration="800"
 						>
 							<!-- start single product -->
 							<div
 								class="single-slide-product-2"
-								data-sal-delay="600"
+								data-sal-delay="400"
 								data-sal="slide-up"
 								data-sal-duration="800"
 							>
@@ -894,7 +891,7 @@
 							</div>
 							<div
 								class="single-slide-product-2"
-								data-sal-delay="700"
+								data-sal-delay="500"
 								data-sal="slide-up"
 								data-sal-duration="800"
 							>
@@ -918,7 +915,7 @@
 							</div>
 							<div
 								class="single-slide-product-2"
-								data-sal-delay="800"
+								data-sal-delay="600"
 								data-sal="slide-up"
 								data-sal-duration="800"
 							>
@@ -1050,6 +1047,10 @@
 				slidesPerView: 'auto',
 				spaceBetween: 80,
 				centeredSlides: true,
+				autoplay: {
+					delay: 4000,
+					disableOnInteraction: true,
+				},
 				// If we need pagination
 				pagination: {
 					el: '.swiper-pagination',

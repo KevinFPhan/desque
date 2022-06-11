@@ -12242,7 +12242,6 @@ body.sal-disabled [data-sal|='flip'] {
 .haeder-default .header-right .mainmenu li a:hover {
 	color: var(--color-primary);
 }
-
 .search-form-wrapper {
 	position: relative;
 }
@@ -12775,6 +12774,7 @@ input[type='search']::-webkit-search-results-decoration {
 }
 .rn-header.header--fixed.sticky {
 	background: #00000070;
+	/* background */
 	backdrop-filter: blur(15px);
 }
 .rn-header.header--fixed.sticky
@@ -13625,7 +13625,7 @@ Blog style
 ----------------------------*/
 .rn-blog {
 	text-align: left;
-	padding: 18px;
+	padding: 30px;
 	position: relative;
 	border-radius: 7px;
 	background: var(--background-color-1);
@@ -13633,7 +13633,7 @@ Blog style
 	position: relative;
 	z-index: 1;
 	transition: 0.5s all ease-in-out;
-	height: 200px;
+	height: 250px;
 	/* height: auto; */
 	max-width: 384px;
 }
@@ -18917,9 +18917,10 @@ button .small-image {
 .isotop-filter button.is-checked,
 .isotop-filter button:hover,
 .isotop-filter button:focus {
-	color: var(--color-primary) !important;
-	background: var(--color-primary-alta);
-	border-color: var(--color-primary-alta);
+	/* color: var(--color-primary) !important; */
+	color: var(--color-dark) !important;
+	background: var(--color-primary);
+	/* border-color: var(--color-primary-alta); */
 }
 
 /*---------------------------
@@ -23720,7 +23721,7 @@ hr.form-ans-separator {
     White Version Demo  
 -----------------------------------*/
 body.active-light-mode {
-	background: var(--background-color-2);
+	background: var(--color-gray-dark);
 }
 
 .active-light-mode {
@@ -24541,7 +24542,8 @@ body.active-light-mode {
 }
 
 .active-light-mode .rn-header.sticky {
-	background-color: #f5f8fa;
+	/* background-color: #f5f8fa; */
+	background-color: #ebebeb;
 }
 
 .active-light-mode .product-style-one,
@@ -26342,7 +26344,7 @@ body.active-light-mode {
 		height: 527px;
 	}
 	.swiper-pagination.swiper-home {
-		top: 87%;
+		top: 89%;
 	}
 	.swiper-slide.swiper-home .swiper--logo {
 		margin-bottom: 110px;
@@ -26483,6 +26485,10 @@ body.active-light-mode {
 	color: var(--color-primary);
 	transform: all 0.2s ease-in;
 }
+.active-light-mode .mainmenu a.link:hover {
+	color: var(--color-primary);
+	transform: all 0.2s ease-in;
+}
 
 .mainmenu a.link::before {
 	content: '';
@@ -26496,6 +26502,11 @@ body.active-light-mode {
 	transform-origin: right;
 	transform: scaleX(0);
 	transition: transform 0.2s ease-in-out;
+}
+.active-light-mode .mainmenu a.link::before {
+
+	background-color: var(--color-primary);
+
 }
 
 .mainmenu a.link:hover::before {
@@ -26602,8 +26613,13 @@ body.active-light-mode {
 	background-color: rgb(39, 41, 54);
 	opacity: 0.6;
 }
-
+.active-light-mode .video-overlay-2 {
+	background-color: rgb(97, 97, 97);
+}
 .active-nav {
+	color: var(--color-primary) !important;
+}
+.active-light-mode .active-nav {
 	color: var(--color-primary) !important;
 }
 
@@ -26872,6 +26888,9 @@ body.active-light-mode {
 		left: 8%;
 		top: 100px;
 		bottom: inherit; *****
+	}
+	.swiper.swiper-service {
+		height: 650px;
 	}
 }
 
