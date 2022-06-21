@@ -27210,9 +27210,13 @@ input:active .contact-box::after {
 }
 
 .active-light-mode .slider-area h1.title {
-	color: var(--font-color-light);
+	color: var(--font-color-light); *****
 }
 
 .form-label {
 	/* font-size: 16px; */
+}
+
+.h--130 {
+	height: 130%;
 }

@@ -682,13 +682,13 @@
 				renderer: 'svg',
 				loop: false,
 				autoplay: false,
+
 				rendererSettings: {
 					progressiveLoad: false,
 				},
 				path: 'DesqueLogo.json',
 			};
 			anim = bodymovin.loadAnimation(animData);
-			anim.setSpeed(1);
 
 			logo1.addEventListener('mouseover', () => {
 				anim.setSpeed(3);
