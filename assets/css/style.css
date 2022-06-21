@@ -25934,29 +25934,11 @@ body.active-light-mode {
 	position: relative;
 }
 
-#DesqueLogo::after {
-	content: '';
-	background-image: url('https://desque.sfo3.cdn.digitaloceanspaces.com/desque/TheDesque_Logo1.png');
-	background-size: cover;
-	background-repeat: no-repeat;
-	position: absolute;
-	height: 25px;
-	object-fit: cover;
-	width: 91px;
-	top: 25%;
-	transform: translate3d(0, 0, 0);
-	/* transform: translate(-30%, -50%); */
-	opacity: 0;
-	/* animation: logoSlideBack 1s cubic-bezier(0, 0, 0.12, 1); */
-	transition: 0.5s cubic-bezier(0, 0, 0.12, 1);
+#DesqueLogoBlack {
+	height: 60px !important;
+	position: relative;
 }
 
-/* #DesqueLogo:hover::after {
-	animation: logoSlide 1s cubic-bezier(0, 0, 0.12, 1) 600ms forwards;
-	transform: translate3d(20px, 0, 0);
-	transition: 0.5s cubic-bezier(0, 0, 0.12, 1)  ;
-	opacity: 1;
-} */
 
 @keyframes logoSlide {
 	0% {
