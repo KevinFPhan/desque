@@ -1,0 +1,154 @@
+<!-- JS ============================================ -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+<script src="https://desque.sfo3.cdn.digitaloceanspaces.com/desque/vendor/js/jquery.js"></script>
+<script src="https://desque.sfo3.cdn.digitaloceanspaces.com/desque/vendor/js/jquery.nice-select.min.js"></script>
+<script src="https://desque.sfo3.cdn.digitaloceanspaces.com/desque/vendor/js/jquery-ui.js"></script>
+<script src="https://desque.sfo3.cdn.digitaloceanspaces.com/desque/vendor/js/modernizer.min.js"></script>
+<script src="https://desque.sfo3.cdn.digitaloceanspaces.com/desque/vendor/js/feather.min.js"></script>
+<script src="https://desque.sfo3.cdn.digitaloceanspaces.com/desque/vendor/js/slick.min.js"></script>
+<script src="https://desque.sfo3.cdn.digitaloceanspaces.com/desque/vendor/js/bootstrap.min.js"></script>
+<script src="https://desque.sfo3.cdn.digitaloceanspaces.com/desque/vendor/js/sal.min.js"></script>
+<script src="https://desque.sfo3.cdn.digitaloceanspaces.com/desque/vendor/js/particles.js"></script>
+<script src="https://desque.sfo3.cdn.digitaloceanspaces.com/desque/vendor/js/jquery.style.swicher.js"></script>
+<script src="https://desque.sfo3.cdn.digitaloceanspaces.com/desque/vendor/js/js.cookie.js"></script>
+<script src="https://desque.sfo3.cdn.digitaloceanspaces.com/desque/vendor/js/count-down.js"></script>
+<script src="https://desque.sfo3.cdn.digitaloceanspaces.com/desque/vendor/js/isotop.js"></script>
+<script src="https://desque.sfo3.cdn.digitaloceanspaces.com/desque/vendor/js/imageloaded.js"></script>
+<script src="https://desque.sfo3.cdn.digitaloceanspaces.com/desque/vendor/js/backtoTop.js"></script>
+<script src="https://desque.sfo3.cdn.digitaloceanspaces.com/desque/vendor/js/odometer.js"></script>
+<script src="https://desque.sfo3.cdn.digitaloceanspaces.com/desque/vendor/js/jquery-appear.js"></script>
+<script src="https://desque.sfo3.cdn.digitaloceanspaces.com/desque/vendor/js/scrolltrigger.js"></script>
+<script src="https://desque.sfo3.cdn.digitaloceanspaces.com/desque/vendor/js/jquery.custom-file-input.js"></script>
+<script src="https://desque.sfo3.cdn.digitaloceanspaces.com/desque/vendor/js/savePopup.js"></script>
+<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+<!-- Lottie JS Logo -->
+<script src="https://desque.sfo3.cdn.digitaloceanspaces.com/desque/vendor/js/lottie.min.js"></script>
+<!-- main JS -->
+<script src="/assets/js/main.js"></script>
+<script>
+	// Swiper JS
+	const swiperHome = new Swiper('.mySwiper1', {
+		slideToClickedSlide: true,
+		// Optional parameters
+		loop: true,
+		// loopedSlides: 4,
+		centeredSlides: true,
+		slidesPerView: 'auto',
+		spaceBetween: 120,
+		autoplay: {
+			delay: 4000,
+			disableOnInteraction: true,
+		},
+		// If we need pagination
+		pagination: {
+			el: '.swiper-pagination',
+			clickable: true,
+		},
+
+		// Navigation arrows
+		navigation: {
+			nextEl: '.swiper-button-next',
+			prevEl: '.swiper-button-prev',
+		},
+	});
+
+	const swiperAbout = new Swiper('.mySwiper2', {
+		// slideToClickedSlide: true,
+		// Optional parameters
+		loop: true,
+		// loopedSlides: 4,
+		slidesPerView: 'auto',
+		spaceBetween: 80,
+		centeredSlides: true,
+		autoplay: {
+			delay: 4000,
+			disableOnInteraction: true,
+		},
+		// If we need pagination
+		pagination: {
+			el: '.swiper-pagination',
+			clickable: true,
+		},
+
+		// Navigation arrows
+		navigation: {
+			nextEl: '.swiper-button-next',
+			prevEl: '.swiper-button-prev',
+		},
+	});
+
+	const svMenu = [
+		'01. Research',
+		'02. Architecture',
+		'03. Design',
+		'04. Front-End',
+		'05. Back-End & CMS',
+		'06. Testing',
+		'07. Go Live',
+		'08. Maintainance',
+	];
+	const swiperService = new Swiper('.mySwiper3', {
+		// Optional parameters
+		direction: 'horizontal',
+		// If we need pagination
+		// speed: 600,
+		effect: 'fade',
+		autoplay: {
+			delay: 4000,
+			disableOnInteraction: true,
+		},
+		pagination: {
+			el: '.swiper-pagination',
+			clickable: true,
+			renderBullet: function (index, className) {
+				return (
+					'<span class="' +
+					className +
+					'">' +
+					svMenu[index] +
+					'</span>'
+				);
+			},
+		},
+		breakpoints: {
+			577: {
+				direction: 'vertical',
+			},
+		},
+		// Navigation arrows
+		navigation: {
+			nextEl: '.swiper-button-next',
+			prevEl: '.swiper-button-prev',
+		},
+	});
+
+	// Logo Animation
+	const logo1 = document.getElementById('DesqueLogo');
+	var anim;
+	var animData = {
+		container: document.getElementById('DesqueLogo'),
+		renderer: 'svg',
+		loop: false,
+		autoplay: false,
+		rendererSettings: {
+			progressiveLoad: false,
+		},
+		// path: 'DesqueLogo.json',
+		path: 'https://desque.sfo3.cdn.digitaloceanspaces.com/desque/vendor/js/DesqueLogo.json',
+	};
+	anim = bodymovin.loadAnimation(animData);
+	anim.setSpeed(1);
+
+	logo1.addEventListener('mouseover', () => {
+		anim.setSpeed(3);
+		anim.setDirection(1);
+
+		anim.play();
+	});
+
+	logo1.addEventListener('mouseleave', () => {
+		anim.setSpeed(3);
+		anim.setDirection(-1);
+		anim.play();
+	});
+</script>
