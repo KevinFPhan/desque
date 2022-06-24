@@ -885,58 +885,14 @@ anime
 		delay: (el, i) => 4100 + 30 * i,
 	});
 
-// Swiper JS
-const swiper = new Swiper('.mySwiper', {
-	slideToClickedSlide: true,
-	// Optional parameters
-	loop: true,
-	// loopedSlides: 4,
-	centeredSlides: true,
-	slidesPerView: 'auto',
-	spaceBetween: 120,
-	autoplay: {
-		delay: 4000,
-		disableOnInteraction: true,
-	},
-	// If we need pagination
-	pagination: {
-		el: '.swiper-pagination',
-		clickable: true,
-	},
+// Contact Box
+// const inputBorder = document.querySelectorAll('.contact-box');
+// const inputBorder2 = document.querySelector('.contact-box');
+// const inputBox = window.getComputedStyle(inputBorder2, '::after');
 
-	// Navigation arrows
-	navigation: {
-		nextEl: '.swiper-button-next',
-		prevEl: '.swiper-button-prev',
-	},
-});
-
-// Logo Animation
-const logo1 = document.getElementById('DesqueLogo');
-var anim;
-var animData = {
-	container: document.getElementById('DesqueLogo'),
-	renderer: 'svg',
-	loop: false,
-	autoplay: false,
-	rendererSettings: {
-		progressiveLoad: false,
-	},
-	// path: 'DesqueLogo.json',
-	path: 'https://desque.sfo3.cdn.digitaloceanspaces.com/desque/vendor/js/DesqueLogo.json',
-};
-anim = bodymovin.loadAnimation(animData);
-anim.setSpeed(1);
-
-logo1.addEventListener('mouseover', () => {
-	anim.setSpeed(3);
-	anim.setDirection(1);
-
-	anim.play();
-});
-
-logo1.addEventListener('mouseleave', () => {
-	anim.setSpeed(3);
-	anim.setDirection(-1);
-	anim.play();
-});
+// const inputd = document.querySelectorAll('input');
+// for (let i = 0; i < inputBorder.length; i++) {
+// 	inputBorder[i].addEventListener('click', function () {
+// 		inputBorder[i].classList.addClass('contact-anim');
+// 	});
+// }

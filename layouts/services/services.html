@@ -99,6 +99,7 @@
 	</section>
 	<!-- end service cards  -->
 
+	{{ with .Params.carousel }}
 	<!-- Start Service Vertical Carousel  -->
 	<section
 		class="swiper swiper-service mySwiper3 rn-section-gapTop container"
@@ -110,93 +111,19 @@
 			<h3>Our Approach</h3>
 		</div>
 		<div class="swiper-wrapper swiper-service">
-			<div class="swiper-slide swiper-service" data-info="01. Research">
-				<h3>01.</h3>
-				<h3>Research</h3>
-				<p>
-					Lorem ipsum dolor sit amet consectetur adipisicing elit.
-					Accusantium quis quidem inventore rerum, fugiat odio ab,
-					minus magnam tenetur impedit recusandae, sit aliquam maxime
-					corrupti itaque assumenda debitis dolorum delectus!
-				</p>
+			{{ range . }}
+			<div class="swiper-slide swiper-service">
+				<h3>{{ .number }}</h3>
+				<h3>{{ .title }}</h3>
+				<p>{{ .content }}</p>
 			</div>
-			<div class="swiper-slide swiper-service" data-info="01. Research">
-				<h3>02.</h3>
-				<h3>Architecture</h3>
-				<p>
-					Lorem ipsum dolor sit amet consectetur adipisicing elit.
-					Accusantium quis quidem inventore rerum, fugiat odio ab,
-					minus magnam tenetur impedit recusandae, sit aliquam maxime
-					corrupti itaque assumenda debitis dolorum delectus!
-				</p>
-			</div>
-			<div class="swiper-slide swiper-service" data-info="01. Research">
-				<h3>03.</h3>
-				<h3>Design</h3>
-				<p>
-					Lorem ipsum dolor sit amet consectetur adipisicing elit.
-					Accusantium quis quidem inventore rerum, fugiat odio ab,
-					minus magnam tenetur impedit recusandae, sit aliquam maxime
-					corrupti itaque assumenda debitis dolorum delectus!
-				</p>
-			</div>
-			<div class="swiper-slide swiper-service" data-info="01. Research">
-				<h3>04.</h3>
-				<h3>Front-End</h3>
-				<p>
-					Lorem ipsum dolor sit amet consectetur adipisicing elit.
-					Accusantium quis quidem inventore rerum, fugiat odio ab,
-					minus magnam tenetur impedit recusandae, sit aliquam maxime
-					corrupti itaque assumenda debitis dolorum delectus!
-				</p>
-			</div>
-			<div class="swiper-slide swiper-service" data-info="01. Research">
-				<h3>05.</h3>
-				<h3>Back-End & CMS</h3>
-				<p>
-					Lorem ipsum dolor sit amet consectetur adipisicing elit.
-					Accusantium quis quidem inventore rerum, fugiat odio ab,
-					minus magnam tenetur impedit recusandae, sit aliquam maxime
-					corrupti itaque assumenda debitis dolorum delectus!
-				</p>
-			</div>
-			<div class="swiper-slide swiper-service" data-info="01. Research">
-				<h3>06.</h3>
-				<h3>Testing</h3>
-				<p>
-					Lorem ipsum dolor sit amet consectetur adipisicing elit.
-					Accusantium quis quidem inventore rerum, fugiat odio ab,
-					minus magnam tenetur impedit recusandae, sit aliquam maxime
-					corrupti itaque assumenda debitis dolorum delectus!
-				</p>
-			</div>
-			<div class="swiper-slide swiper-service" data-info="01. Research">
-				<h3>07.</h3>
-				<h3>Go Live</h3>
-				<p>
-					Lorem ipsum dolor sit amet consectetur adipisicing elit.
-					Accusantium quis quidem inventore rerum, fugiat odio ab,
-					minus magnam tenetur impedit recusandae, sit aliquam maxime
-					corrupti itaque assumenda debitis dolorum delectus!
-				</p>
-			</div>
-			<div class="swiper-slide swiper-service" data-info="01. Research">
-				<h3>08.</h3>
-				<h3>Maintainance</h3>
-				<p>
-					Lorem ipsum dolor sit amet consectetur adipisicing elit.
-					Accusantium quis quidem inventore rerum, fugiat odio ab,
-					minus magnam tenetur impedit recusandae, sit aliquam maxime
-					corrupti itaque assumenda debitis dolorum delectus!
-				</p>
-			</div>
+			{{ end }}
 		</div>
 		<div class="swiper-pagination swiper-service"></div>
 	</section>
-
 	<!-- End Service Vertical Carousel  -->
-
-	<!-- start Featured Clients area -->
+	{{ end }} {{ with .Params.logo }}
+	<!-- start category area -->
 	<div class="category-area pt--70 mb--150 mb_sm--0 mb_md--100">
 		<div class="container">
 			<div class="row">
@@ -212,6 +139,7 @@
 				</div>
 			</div>
 			<div class="row g-5 justify-content-center align-items-center">
+				{{ range . }}
 				<!-- start single category -->
 				<div
 					class="col-lg-3 col-xl-2 col-md-4 col-sm-6 col-6"
@@ -220,181 +148,15 @@
 					data-sal-duration="800"
 				>
 					<div class="clients-logo">
-						<img
-							src="https://desque.sfo3.cdn.digitaloceanspaces.com/desque/assets/Logo/EnergyCinq.png"
-							alt=""
-						/>
+						<img src="{{ .image }}" alt="" />
 					</div>
 				</div>
 				<!-- end single category -->
-				<!-- start single category -->
-				<div
-					class="col-lg-3 col-xl-2 col-md-4 col-sm-6 col-6"
-					data-sal-delay="200"
-					data-sal="slide-up"
-					data-sal-duration="800"
-				>
-					<div class="clients-logo">
-						<img
-							src="https://desque.sfo3.cdn.digitaloceanspaces.com/desque/assets/Logo/EnergyCinq.png"
-							alt=""
-						/>
-					</div>
-				</div>
-				<!-- end single category -->
-				<!-- start single category -->
-				<div
-					class="col-lg-3 col-xl-2 col-md-4 col-sm-6 col-6"
-					data-sal-delay="200"
-					data-sal="slide-up"
-					data-sal-duration="800"
-				>
-					<div class="clients-logo">
-						<img
-							src="https://desque.sfo3.cdn.digitaloceanspaces.com/desque/assets/Logo/EnergyCinq.png"
-							alt=""
-						/>
-					</div>
-				</div>
-				<!-- end single category -->
-				<!-- start single category -->
-				<div
-					class="col-lg-3 col-xl-2 col-md-4 col-sm-6 col-6"
-					data-sal-delay="200"
-					data-sal="slide-up"
-					data-sal-duration="800"
-				>
-					<div class="clients-logo">
-						<img
-							src="https://desque.sfo3.cdn.digitaloceanspaces.com/desque/assets/Logo/EnergyCinq.png"
-							alt=""
-						/>
-					</div>
-				</div>
-				<!-- end single category -->
-				<!-- start single category -->
-				<div
-					class="col-lg-3 col-xl-2 col-md-4 col-sm-6 col-6"
-					data-sal-delay="200"
-					data-sal="slide-up"
-					data-sal-duration="800"
-				>
-					<div class="clients-logo">
-						<img
-							src="https://desque.sfo3.cdn.digitaloceanspaces.com/desque/assets/Logo/EnergyCinq.png"
-							alt=""
-						/>
-					</div>
-				</div>
-				<!-- end single category -->
-				<!-- start single category -->
-				<div
-					class="col-lg-3 col-xl-2 col-md-4 col-sm-6 col-6"
-					data-sal-delay="200"
-					data-sal="slide-up"
-					data-sal-duration="800"
-				>
-					<div class="clients-logo">
-						<img
-							src="https://desque.sfo3.cdn.digitaloceanspaces.com/desque/assets/Logo/EnergyCinq.png"
-							alt=""
-						/>
-					</div>
-				</div>
-				<!-- end single category -->
-				<!-- start single category -->
-				<div
-					class="col-lg-3 col-xl-2 col-md-4 col-sm-6 col-6"
-					data-sal-delay="200"
-					data-sal="slide-up"
-					data-sal-duration="800"
-				>
-					<div class="clients-logo">
-						<img
-							src="https://desque.sfo3.cdn.digitaloceanspaces.com/desque/assets/Logo/EnergyCinq.png"
-							alt=""
-						/>
-					</div>
-				</div>
-				<!-- end single category -->
-				<!-- start single category -->
-				<div
-					class="col-lg-3 col-xl-2 col-md-4 col-sm-6 col-6"
-					data-sal-delay="200"
-					data-sal="slide-up"
-					data-sal-duration="800"
-				>
-					<div class="clients-logo">
-						<img
-							src="https://desque.sfo3.cdn.digitaloceanspaces.com/desque/assets/Logo/EnergyCinq.png"
-							alt=""
-						/>
-					</div>
-				</div>
-				<!-- end single category -->
-				<!-- start single category -->
-				<div
-					class="col-lg-3 col-xl-2 col-md-4 col-sm-6 col-6"
-					data-sal-delay="200"
-					data-sal="slide-up"
-					data-sal-duration="800"
-				>
-					<div class="clients-logo">
-						<img
-							src="https://desque.sfo3.cdn.digitaloceanspaces.com/desque/assets/Logo/EnergyCinq.png"
-							alt=""
-						/>
-					</div>
-				</div>
-				<!-- end single category -->
-				<!-- start single category -->
-				<div
-					class="col-lg-3 col-xl-2 col-md-4 col-sm-6 col-6"
-					data-sal-delay="200"
-					data-sal="slide-up"
-					data-sal-duration="800"
-				>
-					<div class="clients-logo">
-						<img
-							src="https://desque.sfo3.cdn.digitaloceanspaces.com/desque/assets/Logo/EnergyCinq.png"
-							alt=""
-						/>
-					</div>
-				</div>
-				<!-- end single category -->
-				<!-- start single category -->
-				<div
-					class="col-lg-3 col-xl-2 col-md-4 col-sm-6 col-6"
-					data-sal-delay="200"
-					data-sal="slide-up"
-					data-sal-duration="800"
-				>
-					<div class="clients-logo">
-						<img
-							src="https://desque.sfo3.cdn.digitaloceanspaces.com/desque/assets/Logo/EnergyCinq.png"
-							alt=""
-						/>
-					</div>
-				</div>
-				<!-- end single category -->
-				<!-- start single category -->
-				<div
-					class="col-lg-3 col-xl-2 col-md-4 col-sm-6 col-6"
-					data-sal-delay="200"
-					data-sal="slide-up"
-					data-sal-duration="800"
-				>
-					<div class="clients-logo">
-						<img
-							src="https://desque.sfo3.cdn.digitaloceanspaces.com/desque/assets/Logo/EnergyCinq.png"
-							alt=""
-						/>
-					</div>
-				</div>
-				<!-- end single category -->
+				{{ end }}
 			</div>
 		</div>
 	</div>
-	<!-- end Featured Clients area -->
+	<!-- end category area -->
+	{{ end }}
 </main>
 {{ end }}

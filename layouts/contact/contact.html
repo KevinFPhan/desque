@@ -1,3 +1,239 @@
 {{ define "main" }}
-<main></main>
+<main>
+    
+	<!-- About banner area -->
+	<div class="rn-about-banner-area rn-section-gapTop">
+		<div class="container mb--30">
+			<div class="row">
+				<div class="col-12">
+					<h1
+						class="title about-title-l"
+						data-sal="slide-up"
+						data-sal-duration="800"
+						data-sal-delay="150"
+					>
+						What We Do
+					</h1>
+					<p
+						class="description-d about-des-l"
+						data-sal="slide-up"
+						data-sal-duration="800"
+						data-sal-delay="150"
+					>
+						We play to our strengths: ideating, creating and
+						shipping amazing things
+					</p>
+				</div>
+			</div>
+		</div>
+		<div class="container-fluid about-fluidimg">
+			<div class="row">
+				<div class="img-wrapper">
+					<div class="bg_image--22 bg_image"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- About banner area End -->
+
+	<!-- Contact Area  -->
+	<div class="rn-contact-top-area rn-section-gapTop bg_color--5">
+		<div class="container">
+			<div class="row g-5">
+				<div
+					class="col-lg-6 col-12 "
+					data-sal="slide-up"
+					data-sal-delay="150"
+					data-sal-duration="800"
+				>
+					<div class="h--100">
+						<div class="rn-address mt_dec--100  widge-wrapper rbt-sticky-top-adjust-seven">
+							<h1>Drop us a line</h1>
+							<div class="inner">
+								<p>
+									<a href="mailto:admin@gmail.com"
+										>hello@thedesque.com</a
+									>
+								</p>
+								<p>
+									<a href="tel:+15122707211"
+										>512.270.7211</a
+									>
+								</p>
+								
+							</div>
+							<ul class="social-copyright">
+									<li>
+												<a href="#"
+													><i
+														data-feather="facebook"
+													></i
+												></a>
+											</li>
+											<li>
+												<a href="#"
+													><i
+														data-feather="twitter"
+													></i
+												></a>
+											</li>
+											<li>
+												<a href="#"
+													><i
+														data-feather="instagram"
+													></i
+												></a>
+											</li>
+											<li>
+												<a href="#"
+													><i
+														data-feather="linkedin"
+													></i
+												></a>
+											</li>
+											<li>
+												<a href="#"
+													><i data-feather="mail"></i
+												></a>
+											</li>
+								</ul>
+						</div>
+					</div>	
+				</div>
+				<div
+					class="col-lg-6"
+					data-sal="slide-up"
+					data-sal-delay="200"
+					data-sal-duration="800"
+				>
+					<div class="form-wrapper-one registration-area">
+						<!-- <h3 class="mb--30">Contact Us</h3> -->
+						<form
+							class="rwt-dynamic-form"
+							id="contact-form"
+							method="POST"
+							action=""
+						>
+							<div class="row ">
+								<div class="mb-5 col-lg-6">		
+									<label for="first-name" class="form-label">First Name</label>	
+									<div class="contact-box">
+										<input
+									name="first-name"
+									id="first-name"
+									type="text"
+									placeholder="John"
+									/>
+									</div>		
+									
+								</div>
+								<div class="mb-5 col-lg-6">
+									<label for="last-name" class="form-label">Last Name</label>
+									<input
+									id="last-name"
+									name="last-name"
+									type="text"
+									placeholder="Doe"
+									/>
+								</div>
+							</div>
+
+							<div class="row">
+								<div class="mb-5 col-lg-6">		
+									<label for="email" class="form-label">Email</label>			
+									<input
+									id="email"
+									name="email"
+									type="email"
+									placeholder="JohnD@mycompany.com"
+									/>
+								</div>
+								<div class="mb-5 col-lg-6">
+									<label for="phone" class="form-label">Phone</label>
+									<input
+									id="phone"
+									name="phone"
+									type="text"
+									placeholder="123.456.7890"
+									/>
+								</div>
+							</div>
+							
+							<div class="mb-5">
+								<label for="role-title" class="form-label">Your role/title</label>
+								<input
+									id="role-title"
+									name="role-title"
+									type="text"
+									placeholder="Marketing Diirector"
+								/>
+							</div>
+							<div class="mb-5 contact-box">
+								<label for="contact-message" class="form-label">Message</label>
+								<textarea
+									name="contact-message"
+									id="contact-message"
+									rows="3"
+									placeholder="We want to work with you!"
+								></textarea>
+							</div>
+							<button
+								name="submit"
+								type="submit"
+								class="btn btn-primary"
+							>
+								Send Message
+							</button>
+						</form>
+					</div>
+				</div>
+
+		</div>
+	</div>
+
+	{{ with .Params.location }}
+	<!-- Our Location area Start -->
+	<div class="rn-location-area rn-section-gapTop pt--100">
+		<div class="container">
+			<div class="row">
+				<div class="col-12 mb--50">
+					<h3
+						class="title text-center text-lg-start"
+						data-sal-delay="150"
+						data-sal="slide-up"
+						data-sal-duration="800"
+					>
+						Our Location
+					</h3>
+				</div>
+			</div>
+			<div class="row g-5 justify-content-center">
+				{{ range . }}
+				<!-- start single collention -->
+				<div
+					data-sal="slide-up"
+					data-sal-delay="250"
+					data-sal-duration="800"
+					class="col-lg-6 col-md-6 col-sm-6 col-12"
+				>
+					<div class="rn-collection-inner-one">
+						<div class="collection-wrapper">
+							<div class="collection-big-thumbnail">
+								<img src="{{ .image }}" alt="Nft_Profile" />
+							</div>
+							<div class="collection-deg">
+								<h4>{{ .city }}</h4>
+								<p>{{ .content }}</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- End single collention -->
+				{{ end }}
+			</div>
+		</div>
+	</div>
+	<!-- Our Location area End -->
+	{{ end }}
+</main>
 {{ end }}

@@ -119,15 +119,11 @@
 			<div class="col-lg-6 col-md-12 col-sm-12">
 				<div class="copyright-left">
 					<ul class="privacy">
+						{{ range .Site.Menus.footer }}
 						<li>
-							<a href="terms-condition.html">Terms</a>
+							<a class="link" href="{{ .URL }}">{{ .Name }}</a>
 						</li>
-						<li>
-							<a href="privacy-policy.html">Privacy Policy</a>
-						</li>
-						<li>
-							<a href="privacy-policy.html">FAQ</a>
-						</li>
+						{{ end }}
 					</ul>
 				</div>
 			</div>

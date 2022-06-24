@@ -1,0 +1,94 @@
+{{ define "main" }}
+<main>
+	<!-- start Privacy area -->
+	<div class="rn-privacy-policy-area rn-section-gapTop rn-section-gapBottom">
+		<div class="container">
+			<div class="row mb_dec--50">
+				<div class="offset-lg-2 col-lg-8">
+					{{ with .Params.policy }}
+					<div class="privacy-wrapper">
+						{{ with .policy_item_1 }}
+						<h4>{{ .title }}</h4>
+						<ol>
+							<li>{{ .content_1 }}</li>
+							<li>{{ .content_2 }}</li>
+							<li>{{ .content_3 }}</li>
+						</ol>
+						{{ end }} {{ with .policy_item_2 }}
+						<h4>{{ .title }}</h4>
+						<ol>
+							<li>{{ .content_1 }}</li>
+							<li>{{ .content_2 }}</li>
+							<li>{{ .content_3 }}</li>
+						</ol>
+						{{ end }} {{ with .policy_item_3 }}
+						<h4>{{ .title }}</h4>
+						<ol>
+							<li>{{ .content_1 }}</li>
+							<li>{{ .content_2 }}</li>
+							<li>{{ .content_3 }}</li>
+						</ol>
+						{{ end }} {{ with .policy_item_4}}
+						<h4>{{ .title }}</h4>
+						<ol>
+							<li>{{ .content_1 }}</li>
+							<li>{{ .content_2 }}</li>
+							<li>{{ .content_3 }}</li>
+							<li>{{ .content_4 }}</li>
+						</ol>
+						{{ end }}
+					</div>
+					{{ end }}
+				</div>
+			</div>
+			{{/*
+			<div class="row mt--50">
+				<div class="offset-lg-2 col-lg-8">
+					<a href="#" class="btn btn-primary mr--15 ml--25">Accept</a>
+					<a href="#" class="btn btn-primary-alta">Decline</a>
+				</div>
+			</div>
+			*/}}
+		</div>
+	</div>
+	<!-- end Privacy area -->
+</main>
+{{ end }} {{ define "footer" }}
+<!-- Start Footer Area -->
+<div class="copy-right-one ptb--25 bg-color--1">
+	<div class="container-fluid">
+		<div class="row align-items-center">
+			<div class="col-lg-6 col-md-12 col-sm-12">
+				<div class="copyright-left">
+					<ul class="privacy">
+						{{ range .Site.Menus.footer }}
+						<li>
+							<a class="link" href="{{ .URL }}">{{ .Name }}</a>
+						</li>
+						{{ end }}
+					</ul>
+				</div>
+			</div>
+			<div class="col-lg-6 col-md-12 col-sm-12">
+				<div class="copyright-right">
+					<span>©2022 Desque, LLC. All rights reserved.</span>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- End Footer Area -->
+<div class="mouse-cursor cursor-outer"></div>
+<div class="mouse-cursor cursor-inner"></div>
+<!-- Start Top To Bottom Area  -->
+<div class="rn-progress-parent">
+	<svg
+		class="rn-back-circle svg-inner"
+		width="100%"
+		height="100%"
+		viewBox="-1 -1 102 102"
+	>
+		<path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+	</svg>
+</div>
+{{ end }}

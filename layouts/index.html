@@ -55,7 +55,7 @@
 							data-sal-duration="800"
 						>
 							<div class="product-style-one">
-								<a href="product-details.html"
+								<a href="#"
 									><h3
 										class="product-name large-product-title"
 									>
@@ -71,7 +71,7 @@
 							data-sal-duration="800"
 						>
 							<div class="product-style-one">
-								<a href="product-details.html"
+								<a href="#"
 									><h3
 										class="product-name large-product-title"
 									>
@@ -87,7 +87,7 @@
 							data-sal-duration="800"
 						>
 							<div class="product-style-one">
-								<a href="product-details.html"
+								<a href="#"
 									><h3
 										class="product-name large-product-title"
 									>
@@ -154,6 +154,7 @@
 	</div>
 	<!-- end nuron vedio area -->
 
+	{{ with .Params.carousel }}
 	<!-- Slider main container -->
 	<section
 		class="swiper swiper-home mySwiper1"
@@ -162,156 +163,27 @@
 		data-sal-duration="800"
 	>
 		<div class="swiper-wrapper swiper-home">
+			{{ range . }}
 			<div class="swiper-slide swiper-home">
-				<div class="swiper-slide-img swiper-slide-img-1"></div>
-				<img
-					class="swiper--logo"
-					src="https://desque.sfo3.cdn.digitaloceanspaces.com/desque/assets/Logo/Sapa.png"
-					alt=""
-				/>
+				<div class="swiper-slide-img {{ .slide_num }}"></div>
+				<img class="swiper--logo" src="{{ .image }}" alt="" />
 				<div class="brand-details text-center mb--20 w-100">
-					<p>
-						Brand Creation - Brand Identity - Environmental Design
-					</p>
-					<p class="mt-2">Web Design - Marketing & Sales Assets</p>
+					<p>{{ .brand_detail_1 }}</p>
+					<p class="mt-2">{{ .brand_detail_2 }}</p>
 				</div>
 			</div>
-			<div class="swiper-slide swiper-home">
-				<div class="swiper-slide-img swiper-slide-img-2"></div>
-				<img
-					class="swiper--logo"
-					src="https://desque.sfo3.cdn.digitaloceanspaces.com/desque/assets/Logo/EpicModelingAgency.png"
-					alt=""
-				/>
-				<div class="brand-details text-center mb--20 w-100">
-					<p>
-						Brand Creation - Brand Identity - Environmental Design
-					</p>
-					<p class="mt-2">Web Design - Marketing & Sales Assets</p>
-				</div>
-			</div>
-			<div class="swiper-slide swiper-home">
-				<div class="swiper-slide-img swiper-slide-img-3"></div>
-				<img
-					class="swiper--logo"
-					src="https://desque.sfo3.cdn.digitaloceanspaces.com/desque/assets/Logo/ExoticoRentals.png"
-					alt=""
-				/>
-				<div class="brand-details text-center mb--20 w-100">
-					<p>
-						Brand Creation - Brand Identity - Environmental Design
-					</p>
-					<p class="mt-2">Web Design - Marketing & Sales Assets</p>
-				</div>
-			</div>
-			<div class="swiper-slide swiper-home">
-				<div class="swiper-slide-img swiper-slide-img-4"></div>
-				<img
-					class="swiper--logo"
-					src="https://desque.sfo3.cdn.digitaloceanspaces.com/desque/assets/Logo/InstinctAthletics.png"
-					alt=""
-				/>
-				<div class="brand-details text-center mb--20 w-100">
-					<p>
-						Brand Creation - Brand Identity - Environmental Design
-					</p>
-					<p class="mt-2">Web Design - Marketing & Sales Assets</p>
-				</div>
-			</div>
-			<div class="swiper-slide swiper-home">
-				<div class="swiper-slide-img swiper-slide-img-5"></div>
-				<img
-					class="swiper--logo"
-					src="https://desque.sfo3.cdn.digitaloceanspaces.com/desque/assets/Logo/Naran.png"
-					alt=""
-				/>
-				<div class="brand-details text-center mb--20 w-100">
-					<p>
-						Brand Creation - Brand Identity - Environmental Design
-					</p>
-					<p class="mt-2">Web Design - Marketing & Sales Assets</p>
-				</div>
-			</div>
-			<div class="swiper-slide swiper-home">
-				<div class="swiper-slide-img swiper-slide-img-6"></div>
-				<img
-					class="swiper--logo"
-					src="https://desque.sfo3.cdn.digitaloceanspaces.com/desque/assets/Logo/Nuletica.png"
-					alt=""
-				/>
-				<div class="brand-details text-center mb--20 w-100">
-					<p>
-						Brand Creation - Brand Identity - Environmental Design
-					</p>
-					<p class="mt-2">Web Design - Marketing & Sales Assets</p>
-				</div>
-			</div>
-			<div class="swiper-slide swiper-home">
-				<div class="swiper-slide-img swiper-slide-img-7"></div>
-				<img
-					class="swiper--logo"
-					src="https://desque.sfo3.cdn.digitaloceanspaces.com/desque/assets/Logo/Pokeology.png"
-					alt=""
-				/>
-				<div class="brand-details text-center mb--20 w-100">
-					<p>
-						Brand Creation - Brand Identity - Environmental Design
-					</p>
-					<p class="mt-2">Web Design - Marketing & Sales Assets</p>
-				</div>
-			</div>
-			<div class="swiper-slide swiper-home">
-				<div class="swiper-slide-img swiper-slide-img-8"></div>
-				<img
-					class="swiper--logo"
-					src="https://desque.sfo3.cdn.digitaloceanspaces.com/desque/assets/Logo/EnergyCinq.png"
-					alt=""
-				/>
-				<div class="brand-details text-center mb--20 w-100">
-					<p>
-						Brand Creation - Brand Identity - Environmental Design
-					</p>
-					<p class="mt-2">Web Design - Marketing & Sales Assets</p>
-				</div>
-			</div>
-			<div class="swiper-slide swiper-home">
-				<div class="swiper-slide-img swiper-slide-img-9"></div>
-				<img
-					class="swiper--logo"
-					src="https://desque.sfo3.cdn.digitaloceanspaces.com/desque/assets/Logo/Sunrgy.png"
-					alt=""
-				/>
-				<div class="brand-details text-center mb--20 w-100">
-					<p>
-						Brand Creation - Brand Identity - Environmental Design
-					</p>
-					<p class="mt-2">Web Design - Marketing & Sales Assets</p>
-				</div>
-			</div>
-			<div class="swiper-slide swiper-home">
-				<div class="swiper-slide-img swiper-slide-img-10"></div>
-				<img
-					class="swiper--logo"
-					src="https://desque.sfo3.cdn.digitaloceanspaces.com/desque/assets/Logo/UptownBakes.png"
-					alt=""
-				/>
-				<div class="brand-details text-center mb--20 w-100">
-					<p>
-						Brand Creation - Brand Identity - Environmental Design
-					</p>
-					<p class="mt-2">Web Design - Marketing & Sales Assets</p>
-				</div>
-			</div>
+			{{ end }}
 		</div>
 		<div class="swiper-pagination swiper-home"></div>
 		<div class="swiper-button-prev swiper-home"></div>
 		<div class="swiper-button-next swiper-home"></div>
 	</section>
-
+	{{ end }} {{ with .Params.service }}
 	<!-- start service area -->
 	<div class="rn-service-area rn-section-gapTop rn-section-gapBottom2">
 		<div class="container">
 			<div class="row g-5 justify-content-center">
+				{{ range . }}
 				<!-- start single service -->
 				<div class="col-lg-4 col-md-6 col-sm-6 col-12">
 					<div
@@ -322,21 +194,13 @@
 					>
 						<div class="inner">
 							<div class="icon">
-								<img
-									src="https://desque.sfo3.cdn.digitaloceanspaces.com/desque/assets/images/shape-1.png"
-									alt="Shape"
-								/>
+								<img src="{{ .image }}" alt="Shape" />
 							</div>
-							<!-- <div class="subtitle">Step-02</div> -->
 							<div class="content text-center">
 								<h4 class="title">
-									<a href="#">What We Do</a>
+									<a href="#">{{ .title }}</a>
 								</h4>
-								<p class="description">
-									A great collection of beautiful website
-									templates for your need. Choose the best
-									suitable template.
-								</p>
+								<p class="description">{{ .content }}</p>
 								<a class="read-more-button" href="#"
 									><i class="feather-arrow-right"></i
 								></a>
@@ -346,77 +210,12 @@
 					</div>
 				</div>
 				<!-- End single service -->
-				<!-- start single service -->
-				<div class="col-lg-4 col-md-6 col-sm-6 col-12">
-					<div
-						data-sal="slide-up"
-						data-sal-delay="250"
-						data-sal-duration="800"
-						class="rn-service-one color-shape-5"
-					>
-						<div class="inner">
-							<div class="icon">
-								<img
-									src="https://desque.sfo3.cdn.digitaloceanspaces.com/desque/assets/images/shape-5.png"
-									alt="Shape"
-								/>
-							</div>
-							<div class="content text-center">
-								<h4 class="title">
-									<a href="#">What We've Done</a>
-								</h4>
-								<p class="description">
-									We've made the template fully responsive, so
-									it looks great on all devices: desktop,
-									tablets and.
-								</p>
-								<a class="read-more-button" href="#"
-									><i class="feather-arrow-right"></i
-								></a>
-							</div>
-						</div>
-						<a class="over-link" href="#"></a>
-					</div>
-				</div>
-				<!-- End single service -->
-				<!-- start single service -->
-				<div class="col-lg-4 col-md-6 col-sm-6 col-12">
-					<div
-						data-sal="slide-up"
-						data-sal-delay="300"
-						data-sal-duration="800"
-						class="rn-service-one color-shape-6"
-					>
-						<div class="inner">
-							<div class="icon">
-								<img
-									src="https://desque.sfo3.cdn.digitaloceanspaces.com/desque/assets/images/shape-6.png"
-									alt="Shape"
-								/>
-							</div>
-							<div class="content text-center">
-								<h4 class="title">
-									<a href="#">Start A Project</a>
-								</h4>
-								<p class="description">
-									I throw myself down among the tall grass by
-									the stream as I lie close to the earth
-									NFT's.
-								</p>
-								<a class="read-more-button" href="#"
-									><i class="feather-arrow-right"></i
-								></a>
-							</div>
-						</div>
-						<a class="over-link" href="#"></a>
-					</div>
-				</div>
-				<!-- End single service -->
+				{{ end }}
 			</div>
 		</div>
 	</div>
 	<!-- End service area -->
-
+	{{ end }} {{ with .Params.logo }}
 	<!-- start category area -->
 	<div class="category-area pt--70 mb--150 mb_sm--0 mb_md--100">
 		<div class="container">
@@ -433,6 +232,7 @@
 				</div>
 			</div>
 			<div class="row g-5 justify-content-center align-items-center">
+				{{ range . }}
 				<!-- start single category -->
 				<div
 					class="col-lg-3 col-xl-2 col-md-4 col-sm-6 col-6"
@@ -441,181 +241,15 @@
 					data-sal-duration="800"
 				>
 					<div class="clients-logo">
-						<img
-							src="https://desque.sfo3.cdn.digitaloceanspaces.com/desque/assets/Logo/EnergyCinq.png"
-							alt=""
-						/>
+						<img src="{{ .image }}" alt="logo image" />
 					</div>
 				</div>
 				<!-- end single category -->
-				<!-- start single category -->
-				<div
-					class="col-lg-3 col-xl-2 col-md-4 col-sm-6 col-6"
-					data-sal-delay="200"
-					data-sal="slide-up"
-					data-sal-duration="800"
-				>
-					<div class="clients-logo">
-						<img
-							src="https://desque.sfo3.cdn.digitaloceanspaces.com/desque/assets/Logo/EnergyCinq.png"
-							alt=""
-						/>
-					</div>
-				</div>
-				<!-- end single category -->
-				<!-- start single category -->
-				<div
-					class="col-lg-3 col-xl-2 col-md-4 col-sm-6 col-6"
-					data-sal-delay="200"
-					data-sal="slide-up"
-					data-sal-duration="800"
-				>
-					<div class="clients-logo">
-						<img
-							src="https://desque.sfo3.cdn.digitaloceanspaces.com/desque/assets/Logo/EnergyCinq.png"
-							alt=""
-						/>
-					</div>
-				</div>
-				<!-- end single category -->
-				<!-- start single category -->
-				<div
-					class="col-lg-3 col-xl-2 col-md-4 col-sm-6 col-6"
-					data-sal-delay="200"
-					data-sal="slide-up"
-					data-sal-duration="800"
-				>
-					<div class="clients-logo">
-						<img
-							src="https://desque.sfo3.cdn.digitaloceanspaces.com/desque/assets/Logo/EnergyCinq.png"
-							alt=""
-						/>
-					</div>
-				</div>
-				<!-- end single category -->
-				<!-- start single category -->
-				<div
-					class="col-lg-3 col-xl-2 col-md-4 col-sm-6 col-6"
-					data-sal-delay="200"
-					data-sal="slide-up"
-					data-sal-duration="800"
-				>
-					<div class="clients-logo">
-						<img
-							src="https://desque.sfo3.cdn.digitaloceanspaces.com/desque/assets/Logo/EnergyCinq.png"
-							alt=""
-						/>
-					</div>
-				</div>
-				<!-- end single category -->
-				<!-- start single category -->
-				<div
-					class="col-lg-3 col-xl-2 col-md-4 col-sm-6 col-6"
-					data-sal-delay="200"
-					data-sal="slide-up"
-					data-sal-duration="800"
-				>
-					<div class="clients-logo">
-						<img
-							src="https://desque.sfo3.cdn.digitaloceanspaces.com/desque/assets/Logo/EnergyCinq.png"
-							alt=""
-						/>
-					</div>
-				</div>
-				<!-- end single category -->
-				<!-- start single category -->
-				<div
-					class="col-lg-3 col-xl-2 col-md-4 col-sm-6 col-6"
-					data-sal-delay="200"
-					data-sal="slide-up"
-					data-sal-duration="800"
-				>
-					<div class="clients-logo">
-						<img
-							src="https://desque.sfo3.cdn.digitaloceanspaces.com/desque/assets/Logo/EnergyCinq.png"
-							alt=""
-						/>
-					</div>
-				</div>
-				<!-- end single category -->
-				<!-- start single category -->
-				<div
-					class="col-lg-3 col-xl-2 col-md-4 col-sm-6 col-6"
-					data-sal-delay="200"
-					data-sal="slide-up"
-					data-sal-duration="800"
-				>
-					<div class="clients-logo">
-						<img
-							src="https://desque.sfo3.cdn.digitaloceanspaces.com/desque/assets/Logo/EnergyCinq.png"
-							alt=""
-						/>
-					</div>
-				</div>
-				<!-- end single category -->
-				<!-- start single category -->
-				<div
-					class="col-lg-3 col-xl-2 col-md-4 col-sm-6 col-6"
-					data-sal-delay="200"
-					data-sal="slide-up"
-					data-sal-duration="800"
-				>
-					<div class="clients-logo">
-						<img
-							src="https://desque.sfo3.cdn.digitaloceanspaces.com/desque/assets/Logo/EnergyCinq.png"
-							alt=""
-						/>
-					</div>
-				</div>
-				<!-- end single category -->
-				<!-- start single category -->
-				<div
-					class="col-lg-3 col-xl-2 col-md-4 col-sm-6 col-6"
-					data-sal-delay="200"
-					data-sal="slide-up"
-					data-sal-duration="800"
-				>
-					<div class="clients-logo">
-						<img
-							src="https://desque.sfo3.cdn.digitaloceanspaces.com/desque/assets/Logo/EnergyCinq.png"
-							alt=""
-						/>
-					</div>
-				</div>
-				<!-- end single category -->
-				<!-- start single category -->
-				<div
-					class="col-lg-3 col-xl-2 col-md-4 col-sm-6 col-6"
-					data-sal-delay="200"
-					data-sal="slide-up"
-					data-sal-duration="800"
-				>
-					<div class="clients-logo">
-						<img
-							src="https://desque.sfo3.cdn.digitaloceanspaces.com/desque/assets/Logo/EnergyCinq.png"
-							alt=""
-						/>
-					</div>
-				</div>
-				<!-- end single category -->
-				<!-- start single category -->
-				<div
-					class="col-lg-3 col-xl-2 col-md-4 col-sm-6 col-6"
-					data-sal-delay="200"
-					data-sal="slide-up"
-					data-sal-duration="800"
-				>
-					<div class="clients-logo">
-						<img
-							src="https://desque.sfo3.cdn.digitaloceanspaces.com/desque/assets/Logo/EnergyCinq.png"
-							alt=""
-						/>
-					</div>
-				</div>
-				<!-- end single category -->
+				{{ end }}
 			</div>
 		</div>
 	</div>
 	<!-- end category area -->
+	{{ end }}
 </main>
 {{ end }}
