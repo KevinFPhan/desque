@@ -124,7 +124,9 @@
 
 	// Logo Animation
 	const logo1 = document.getElementById('DesqueLogo');
+	const logo2 = document.getElementById('DesqueLogoBlack');
 	var anim;
+	var anim2;
 	var animData = {
 		container: document.getElementById('DesqueLogo'),
 		renderer: 'svg',
@@ -133,10 +135,20 @@
 		rendererSettings: {
 			progressiveLoad: false,
 		},
-		// path: 'DesqueLogo.json',
 		path: 'https://desque.sfo3.cdn.digitaloceanspaces.com/desque/vendor/js/DesqueLogo.json',
 	};
+	var animData2 = {
+		container: document.getElementById('DesqueLogoBlack'),
+		renderer: 'svg',
+		loop: false,
+		autoplay: false,
+		rendererSettings: {
+			progressiveLoad: false,
+		},
+		path: 'https://desque.sfo3.cdn.digitaloceanspaces.com/desque/vendor/js/DesqueLogoBlack.json',
+	};
 	anim = bodymovin.loadAnimation(animData);
+	anim2 = bodymovin.loadAnimation(animData2);
 	anim.setSpeed(1);
 
 	logo1.addEventListener('mouseover', () => {
@@ -150,5 +162,17 @@
 		anim.setSpeed(3);
 		anim.setDirection(-1);
 		anim.play();
+	});
+	logo2.addEventListener('mouseover', () => {
+		anim2.setSpeed(2.7);
+		anim2.setDirection(1);
+
+		anim2.play();
+	});
+
+	logo2.addEventListener('mouseleave', () => {
+		anim2.setSpeed(2.7);
+		anim2.setDirection(-1);
+		anim2.play();
 	});
 </script>

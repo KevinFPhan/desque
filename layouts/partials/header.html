@@ -8,7 +8,8 @@
 		<div class="header-inner">
 			<div class="header-left">
 				<div id="DesqueLogo" class="logo-light"></div>
-				<!-- <div id="DesqueLogoBlack" class="logo-dark"></div> -->
+				{{/*  <div id="DesqueLogoBlack" class="logo-light"></div>  */}}
+				<div id="DesqueLogoBlack" class="logo-dark"></div> 
 				<h1 class="ml12">Desque</h1>
 			</div>
 			<div class="header-middle">
@@ -18,11 +19,12 @@
 						<ul class="mainmenu">
 							{{ range .Site.Menus.main }}
 							<li>
-								<a class="link" href="{{ .URL }}"
+								<a class="link {{ if $.IsMenuCurrent "main" . }} active-nav {{ end }}" href="{{ .URL }} "
 									>{{ .Name }}</a
 								>
 							</li>
 							{{ end }}
+
 						</ul>
 						<!-- <ul class="mainmenu">
 							<li>
