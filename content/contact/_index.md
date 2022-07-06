@@ -1,5 +1,6 @@
 ---
 ####################### Location #########################
+title: 'Contact'
 location:
     # location item loop
     - city: 'Houston, Texas'

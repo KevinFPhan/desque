@@ -27,3 +27,19 @@ weight = 4
 name = "Contact"
 url = "/contact"
 weight = 5
+
+#footer
+[[ menu.footer ]]
+name = "Terms"
+url = "/terms"
+weight = 1
+
+[[ menu.footer ]]
+name = "Privacy Policy"
+url = "/privacy-policy"
+weight = 2
+
+[[ menu.footer ]]
+name = "FAQ"
+url = "/privacy-policy"
+weight = 3

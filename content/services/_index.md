@@ -1,4 +1,5 @@
 ---
+title: 'Service'
 ####################### Logo #########################
 logo:
     # logo item loop

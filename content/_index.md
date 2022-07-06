@@ -1,4 +1,5 @@
 ---
+title: 'Terms'
 ####################### Service #########################
 service:
     # Service item loop

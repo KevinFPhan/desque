@@ -1,4 +1,5 @@
 ---
+title: 'Privacy Policy'
 policy:
     policy_item_1:
         title: 'Welcome to Nuron Privacy Policy'

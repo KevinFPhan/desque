@@ -13007,6 +13007,9 @@ span.rn-badge-card::before {
 		padding: 10px 0;
 		font-size: 24px;
 	}
+	.popup-mobile-menu .inner .header-top {
+		padding: 0px 30px;
+	}
 }
 
 .popup-mobile-menu .mainmenu li a svg {

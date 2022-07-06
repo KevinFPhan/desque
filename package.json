@@ -1,0 +1,20 @@
+{
+	"name": "nuron-desque",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"dev": "hugo server --disableFastRender",
+		"build": "hugo --cleanDestinationDir --gc --minify"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/KevinFPhan/desque.git"
+	},
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/KevinFPhan/desque/issues"
+	},
+	"homepage": "https://github.com/KevinFPhan/desque#readme"
+}

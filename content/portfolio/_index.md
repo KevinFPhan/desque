@@ -1,4 +1,5 @@
 ---
+title: 'Portfolio'
 ####################### Banner #########################
 banner:
     title: 'i am banner'
@@ -23,7 +24,7 @@ portfolio:
               enable: true
               category: 'cat--2'
               icon: 'fab fa-apple'
-              link: 'portfolio-details'
+              link: '/portfolio-details'
               image: 'https://desque.sfo3.cdn.digitaloceanspaces.com/desque/assets/images/portfolio-01.jpg'
         # header item loop
         - name: 'Customer 3'
@@ -31,6 +32,6 @@ portfolio:
               enable: true
               category: 'cat--3'
               icon: 'fab fa-apple'
-              link: 'portfolio-details'
+              link: '/portfolio-details'
               image: 'https://desque.sfo3.cdn.digitaloceanspaces.com/desque/assets/images/portfolio-01.jpg'
 ---
